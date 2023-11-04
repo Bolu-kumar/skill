@@ -36,7 +36,7 @@ faqData.forEach((faq, index) => {
     faqItem.innerHTML = `
         <input type="checkbox" id="question${index + 1}" name="q" class="questions">
         <div class="plus">➡️</div>
-        <label for="question${index + 1}" class="question">${faq.question}</label>
+        <label for="question${index + 1}" class="question border-bottom">${faq.question}</label>
         <div class="answers">${faq.answer}</div>
     `;
 
