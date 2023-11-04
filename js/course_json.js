@@ -12,7 +12,7 @@ var courseData = {
       },
       {
         "title": "Best Excel courses for beginner",
-        "image": "img/course/excel-0.png",
+        "image": "img/course/excel0.png",
         "students": "100+ Students",
         "duration": "2+ Hrs",
         "rating": "4.5",
