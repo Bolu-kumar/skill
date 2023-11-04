@@ -23,7 +23,7 @@ const faqData = [
     },
     {
         question: "Is it a certified workshop?",
-        answer: "Yes, it is an Office Master certified workshop.",
+        answer: "Yes, it is an IT FINISHER certified workshop.",
     },
 ];
 
