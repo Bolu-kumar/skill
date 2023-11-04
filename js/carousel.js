@@ -1,16 +1,25 @@
 var jsonData = [
+  
   {
-    "imageSrc": "img/5.png",
+    "imageSrc": "img/carousel/3.png",
+    "altText": "Image 3",
+  },
+
+  {
+    "imageSrc": "img/carousel/1.png",
     "altText": "Image 1",
   },
+
   {
-    "imageSrc": "img/1.png",
-    "altText": "Image 2",
+    "imageSrc": "img/carousel/4.png",
+    "altText": "Image 4",
   },
   {
-    "imageSrc": "img/2.png",
-    "altText": "Image 3",
-  }
+    "imageSrc": "img/carousel/5.png",
+    "altText": "Image 5",
+  },
+ 
+  
 ];
 
 // Render the JSON data

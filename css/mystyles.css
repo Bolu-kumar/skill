@@ -1,3 +1,33 @@
+/* web tab color */
+ul#web-tab-menu {
+  background-color: #60b4f4; /* Change to your desired background color */
+}
+
+@media (max-width: 768px) {
+  /* Your styles for mobile devices here */
+  ul#web-tab-menu {
+      background-color: #FF0000; /* Change to your brand color */
+  }
+}
+
+/* Whatsapp */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 100px; /* Adjust the distance from the bottom as needed */
+  right: 30px; /* Adjust the distance from the right as needed */
+  z-index: 1000; /* Ensures it's on top of other content */
+}
+
+
+
+.whatsapp-icon img {
+  display: block; /* Hide the image for accessibility */
+  width: 60px;
+  height: 60px;
+}
+
+
+
 .popup-overlay {
   display: none;
   position: fixed;
