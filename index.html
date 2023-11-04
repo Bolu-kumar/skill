@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>IT Finisher</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/mystyles.css" rel="stylesheet">
+    <!-- firebase-app confi-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+    <style>
+      .alert {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid news">
+      <div class="row">
+        <div class="breaking-news-bar">
+          <div class="breaking-news-slide">
+            <a href="#" class="breaking-news-link">
+              <span class="breaking-news-title">Announcement</span>
+              <div class="breaking-news-headline text-white"> Attend a 3-hour Powerful Live Workshop on Data Analysis Using advanced Excel. </div>
+            </a>
+          </div>
+          <!-- Add more breaking-news-slide elements for additional news items -->
+        </div>
+      </div>
+    </div>
+    <!-- Navbar Start -->
+    <div class="container-fluid">
+      <div class="row border-top px-xl-5 py-3">
+        <div class="col-lg-3 d-none d-lg-block">
+          <a href="https://itfinisher.com/">
+            <img class="logo" src="img/itfinisher-logo.png" alt="">
+          </a>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-lg-7">
+          <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+            <a href="" class="text-decoration-none d-block d-lg-none">
+              <img class="logo" src="img/itfinisher-logo.png" alt="">
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+              <div class="navbar-nav py-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="#courses" class="nav-item nav-link">Courses</a>
+                <a href="workshop.html" class="nav-item nav-link">Workshop</a>
+                <a href="#youtube" class="nav-item nav-link">Videos</a>
+                <a href="#faqs" class="nav-item nav-link">FAQs</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+                <!-- "Request Demo" link to open the modal -->
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Support</a>
+              </div>
+              <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="#registration">Live Workshop</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar End -->
+    <!-- Carousel Start -->
+    <div id="carousel-container" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <!-- JSON data will be rendered here -->
+      </div>
+    </div>
+    <!-- Carousel End -->
+    <!-- Courses Start -->
+    <section id="courses" class="py-5">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h1 class="display-5 mb-0 text-center py-5" style="padding-bottom: 100px;">Our Popular Courses
+              <hr class="custom-hr mx-auto bg-primary" style="width: 12%;">
+          </div>
+          <div class="row" id="course-list"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Courses end -->
+    <!-- Single Registration Start -->
+    <section class="workshop">
+      <div id="workshopMultiple">
+        <!-- JSON Data will be rendered here -->
+      </div>
+    </section>
+
+ 
+    <section id="popAuto">
+      <div id="autoPopup" class="popup-overlay">
+        <div class="popup-content">
+            <!-- Bootstrap 4 close button -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeAutoPopup()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h3 class="text-center text-dark" id="popupTitle"></h3>
+            <div id="popupContent" class="text-white"></div>
+            <p class="registration-link">
+                <a id="registrationLink" target="_blank">Become a professional in Excel! Click Here for Registration👇</a>
+            </p>
+            <img class="popup-image" id="popupImage" alt="Image Alt Text">
+        </div>
+    </div>
+    </section>
+
+
+
+    <!-- Testimonial Start -->
+    <!-- <div class="container-fluid py-5"><div class="container py-5"><div class="text-center mb-5"><h1 class="display-5 mb-0 text-center py-5" style="padding-bottom: 100px;">What Say Our Students
+            <hr class="custom-hr mx-auto bg-primary" style="width: 12%;"></div><div class="row justify-content-center"><div class="col-lg-8"><div class="owl-carousel testimonial-carousel"><div class="text-center"><i class="fa fa-3x fa-quote-left text-primary mb-4"></i><h4 class="font-weight-normal mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4><img class="img-fluid mx-auto mb-3" src="img/students/1.png" alt=""><h5 class="m-0">Client Name</h5><span>Profession</span></div><div class="text-center"><i class="fa fa-3x fa-quote-left text-primary mb-4"></i><h4 class="font-weight-normal mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4><img class="img-fluid mx-auto mb-3" src="img/students/2.png" alt=""><h5 class="m-0">Client Name</h5><span>Profession</span></div><div class="text-center"><i class="fa fa-3x fa-quote-left text-primary mb-4"></i><h4 class="font-weight-normal mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4><img class="img-fluid mx-auto mb-3" src="img/students/3.png" alt=""><h5 class="m-0">Client Name</h5><span>Profession</span></div></div></div></div></div></div> -->
+    <!-- Testimonial End -->
+    <section class="myProject">
+      <div class="container">
+        <h1 class="display-5 mb-0 text-center py-5" style="padding-bottom: 100px;">Our Real Projects
+          <hr class="custom-hr mx-auto bg-primary" style="width: 12%;">
+        </h1>
+        <div class="row">
+          <!-- The image gallery will be generated here by JavaScript -->
+        </div>
+      </div>
+    </section>
+    <!-- youtube -->
+    <section id="youtube">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="content">
+            <div class="text-center mb-5">
+              <h1 class="display-5 mb-0 text-center py-2" style="padding-bottom: 10px; margin-top: 50px;">Recorded Videos
+                <hr class="custom-hr mx-auto bg-primary" style="width: 12%;">
+              </h1>
+            </div>
+            <div class="video-gallery">
+              <div class="row" id="video-container">
+                <!-- Videos will be added here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Modal -->
+    <section id="contact-forms">
+      <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-center" id="contactModalLabel" style="text-align: center;">Request Your Query</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <section id="contact-forms">
+                <main>
+                  <div class="contact-form">
+                    <div class="alert alert-success text-center" role="alert"> Your request demo has been successfully submitted! </div>
+                    <form id="contactForm">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" required />
+                      <label for="phone">Phone:</label>
+                      <input type="tel" id="phone" name="phone" pattern="^\+?\d{10,14}$" required />
+                      <label for="message">Message:</label>
+                      <textarea id="message" name="message" rows="4" required></textarea>
+                      <br>
+                      <div class="modal-footer">
+                        <br>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button id="submit" type="submit" class="btn btn-success">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </main>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Start -->
+    <section id="contact" class="py-2">
+      <div class="container">
+        <h1 class="display-5 mb-0 text-center py-5" style="padding-bottom: 100px;">Contact Us
+          <hr class="custom-hr mx-auto bg-primary" style="width: 12%;">
+        </h1>
+        <div class="row">
+          <!-- Left column for text -->
+          <div class="col-md-6">
+            <div class="mb-2">
+              <h4>Head Office</h4>
+              <i class="fa fa-map-marker-alt" style="margin-right: 16px;"></i>Head Office: Near Infosys, Mysore, Karnataka (570027)
+            </div>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt"></i> Phone: +919795298080
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope"></i> Email: admin@itfinisher.com
+            </p>
+            <hr>
+            <h4>Branch Office</h4>
+            <div class="mb-2">
+              <i class="fa fa-map-marker-alt" style="margin-right: 16px;"></i>Branch: Near Post office, Partawal Bazar, Maharajganj, UP (273301)
+            </div>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt"></i> Phone: +919120295593
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope"></i> Email: ajit@itfinisher.com
+            </p>
+            <div class="d-flex pt-3">
+              <a class="btn btn-square btn-primary rounded-circle me-2" href="https://www.instagram.com/mansasugarlimited/">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a class="btn btn-square btn-primary rounded-circle me-2" href="https://www.facebook.com/mansasugar/">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a class="btn btn-square btn-primary rounded-circle me-2" href="">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a class="btn btn-square btn-primary rounded-circle me-2" href="https://www.linkedin.com/company/mansa-sugar-limited">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+            <hr class="d-md-none my-5 mx-auto mt-3 w-100">
+          </div>
+          <!-- Right column for the map -->
+          <div class="col-md-6 animated-section">
+            <iframe id="iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d889.0257687373942!2d83.610401!3d26.963635!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39915587ff09ae49%3A0xb98d3545a533b515!2sPartawal%20Bazar%2C%20Partawal%2C%20Uttar%20Pradesh%20273301!5e0!3m2!1sen!2sin!4v1695445871727!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact end  -->
+    <section id="faqs" class="py-5">
+      <div class='text-center'>
+        <h1 class="animated-section display-5 mb-0 text-center py-5" style="margin-bottom: -1000px;">Frequently Asked Questions
+          <hr class="custom-hr mx-auto bg-primary" style="width: 12%;">
+        </h1>
+      </div>
+      <br>
+      <div class="container faqsContent">
+        <!-- FAQ items will be generated here dynamically using JavaScript -->
+      </div>
+    </section>
+    <!-- termsCondition -->
+    <section id="termsCondition">
+      <div class="text-center">
+        <div id="content">
+          <!-- JSON data will be displayed here in the modal -->
+        </div>
+      </div>
+    </section>
+    <!-- Modal for Dismiss Button -->
+    <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- JSON data is displayed here in the modal -->
+            <div id="modalContent"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const data = {
+        "IT Finisher Terms and Conditions:": "",
+        "Acceptance Of Terms": "By accessing or using IT Finisher's services, including this website (itfinisher.com), you agree to be bound by these terms and conditions. If you do not agree to these terms, please refrain from using our services.",
+        "Privacy Policy": "We respect your privacy and protect your personal information in accordance with our Privacy Policy. Please review our Privacy Policy to understand how we collect, use, and secure your data.",
+        "Use Of Services": "You agree to use IT Finisher's services only for lawful purposes and in a way that does not infringe upon the rights of others, inhibit the use and enjoyment of the services by others, or violate applicable laws and regulations.",
+        "Intellectual Property": "All content, trademarks, and intellectual property on this website are owned by IT Finisher. You may not use, reproduce, or distribute any of the content without prior written consent.",
+        "Disclaimers": "IT Finisher provides information and services on an \"as-is\" basis, without any warranties or guarantees. We do our best to ensure the accuracy and reliability of the information provided, but we cannot guarantee its accuracy or suitability for your specific needs. Use the information and services at your own risk.",
+        "Liability": "IT Finisher will not be liable for any direct, indirect, or consequential damages, losses, or expenses arising from the use of our services or the inability to use them.",
+        "Changes To Terms": "IT Finisher reserves the right to update or modify these terms and conditions at any time without prior notice. Your continued use of our services after such changes signifies your acceptance of the revised terms.",
+        "Contact Us": "If you have any questions or concerns regarding these terms and conditions, please contact us at it.finisher@gmail.com."
+      }
+      const contentDiv = document.getElementById('modalContent');
+      const keys = Object.keys(data);
+      keys.forEach(key => {
+        const section = document.createElement('div');
+        section.innerHTML = `
+																											<h4>${key}</h4>
+																											<p>${data[key]}</p>`;
+        contentDiv.appendChild(section);
+      });
+      // Show modal when the "Dismiss" button is clicked
+      const showTermsButton = document.getElementById('showTermsButton');
+      showTermsButton.addEventListener('click', () => {
+        $('#termsModal').modal('show');
+      });
+    </script>
+    <!-- privacyPolicy -->
+    <section id="termsCondition">
+      <div class="text-center">
+        <div id="content">
+          <!-- JSON data will be displayed here in the modal -->
+        </div>
+      </div>
+    </section>
+    <!-- Modal for Privacy Policy Button -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" role="dialog" aria-labelledby="privacyModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- JSON data is displayed here in the modal -->
+            <div id="privacyModalContent"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const privacyData = {
+        "Privacy Policy for IT Finisher": "",
+        "Personal Information": "When you interact with our services, we may collect personal information, such as your name, email address, phone number, and any other information you voluntarily provide to us.",
+        "Use of Information": "Provide and maintain our services",
+        "Use Of Services": "You agree to use IT Finisher's services only for lawful purposes and in a way that does not infringe upon the rights of others, inhibit the use and enjoyment of the services by others, or violate applicable laws and regulations.",
+        "Notify you about changes to our services": "",
+        "Security": "The security of your personal information is important to us, but please remember that no method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.",
+        "Disclaimers": "IT Finisher provides information and services on an \"as-is\" basis, without any warranties or guarantees. We do our best to ensure the accuracy and reliability of the information provided, but we cannot guarantee its accuracy or suitability for your specific needs. Use the information and services at your own risk.",
+        "Changes To Terms": "IT Finisher reserves the right to update or modify these terms and conditions at any time without prior notice. Your continued use of our services after such changes signifies your acceptance of the revised terms.",
+        "Contact Us": "If you have any questions or concerns regarding these terms and conditions, please contact us at it.finisher@gmail.com."
+      }
+      const privacyContentDiv = document.getElementById('privacyModalContent');
+      const privacyKeys = Object.keys(privacyData);
+      privacyKeys.forEach(key => {
+        const section = document.createElement('div');
+        section.innerHTML = `
+																											<h4>${key}</h4>
+																											<p>${privacyData[key]}</p>`;
+        privacyContentDiv.appendChild(section);
+      });
+      // Show modal when the "Privacy Policy" button is clicked
+      const showPrivacyButton = document.getElementById('showPrivacyButton');
+      showPrivacyButton.addEventListener('click', () => {
+        $('#privacyModal').modal('show');
+      });
+    </script>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+      <div class="row pt-5">
+        <div class="col-lg-7 col-md-12">
+          <div class="row">
+            <div class="col-md-6 mb-5">
+              <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get In Touch</h5>
+              <p class="text-white">
+                <i class="fa fa-map-marker-alt mr-2"></i>Head Office: Near Infosys, Mysore, Karnataka (570027)
+              </p>
+              <p class="text-white">
+                <i class="fa fa-phone-alt mr-2"></i>+919795298083
+              </p>
+              <p class="text-white">
+                <i class="fa fa-envelope mr-2"></i>it.finisher@gmail.com
+              </p>
+              <div class="d-flex justify-content-start mt-4 text-white">
+                <a class="btn btn-outline-light btn-square mr-2" href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a class="btn btn-outline-light btn-square mr-2" href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btn btn-outline-light btn-square mr-2" href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="btn btn-outline-light btn-square" href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 mb-5">
+              <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Our Training</h5>
+              <div class="d-flex flex-column justify-content-start">
+                <a class="text-white mb-2" href="#">
+                  <i class="fa fa-angle-right mr-2"></i>Advanced Excel </a>
+                <a class="text-white mb-2" href="#">
+                  <i class="fa fa-angle-right mr-2"></i>Advanced Word </a>
+                <a class="text-white mb-2" href="#">
+                  <i class="fa fa-angle-right mr-2"></i>Advanced Office 365 </a>
+                <a class="text-white mb-2" href="#">
+                  <i class="fa fa-angle-right mr-2"></i>Data Analyst </a>
+                <a class="text-white" href="#">
+                  <i class="fa fa-angle-right mr-2"></i>Website Development </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-12 mb-5">
+          <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">About Us</h5>
+          <p class="text-white"> We believe in empowering professionals to become the best versions of themselves in the rapidly evolving digital world. We are providing innovative workshops and masterclasses designed to enhance skills, boost productivity, and help professionals achieve their career goals.</p>
+          <div class="w-100">
+            <div class="input-group">
+              <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
+              <div class="input-group-append">
+                <button class="btn btn-primary px-4">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+      <section class="copyright my-0">
+        <div class="bg-dark">
+          <p class="text-center text-white py-3"> All rights reserved © 2023 IT Finisher | <button type="button" class="btn btn-link text-white" data-toggle="modal" data-target="#privacyModal"> Privacy & Policy </button> | <button type="button" class="btn btn-link text-white" data-toggle="modal" data-target="#termsModal"> Terms & Condition </button>
+          </p>
+        </div>
+      </section>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top">
+      <i class="fa fa-angle-double-up"></i>
+    </a>
+    <!-- Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Other JavaScript Libraries -->
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/course_json.js"></script>
+    <script src="js/carousel.js"></script>
+    <!-- <script src="js/workshop.js"></script> -->
+    <script src="js/youtube.js"></script>
+    <script src="js/videos.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/contactForm.js"></script>
+    <script src="js/workshop_multiple.js"></script>
+    <script src="js/myprojects.js"></script>
+    <script src="js/faqs.js"></script>
+    <script src="js/autoPop.js"></script>
+    <script>
+      var carousel = document.querySelector('#carouselExample');
+      // Start the carousel auto scroll
+      carousel.addEventListener('slid.bs.carousel', function() {
+        setTimeout(function() {
+          carousel.carousel('next');
+        }, 2000);
+      });
+    </script>
+ </body>
+</html>

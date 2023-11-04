@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Add Bootstrap 4 CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Custom styles */
+        .custom-container {
+            padding: 20px;
+        }
+
+        .output-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary text-center">
+        <a class="navbar-brand" href="#">Admin Dashboard</a>
+    </nav>
+
+    <div class="container custom-container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>Add Workshop</h2>
+                <form id="workshopForm">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Content</label>
+                        <textarea class="form-control" id="content" name="content" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="imageSrc">Image Source</label>
+                        <input type="text" class="form-control" id="imageSrc" name="imageSrc" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="buttonText">Button Text</label>
+                        <input type="text" class="form-control" id="buttonText" name="buttonText" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="buttonLink">Button Link</label>
+                        <input type="text" class="form-control" id="buttonLink" name="buttonLink" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Workshop</button>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <h2>Workshop Details</h2>
+                <div id="workshopDetails" class="output-card"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for managing and updating workshop details -->
+    <script>
+        const workshopDetails = document.getElementById('workshopDetails');
+        const workshopForm = document.getElementById('workshopForm');
+
+        const workshopData = [
+            {
+                title: "Join Workshop Now",
+                bgColor: "bg-registration",
+                hrColor: "bg-primary",
+                imageSrc: "img/course/office0.png",
+                altText: "Course Image",
+                buttonText: "Become a professional in Excel! Click Here for Registration👇",
+                buttonLink: "www.itfinisher.com",
+                content: [
+                    "LEARN EXCEL - FREE ONLINE EXCEL TRAINING",
+                    "LEARN THE ADVANCE DATA ANALYTICS USING MS EXCEL",
+                    "ATTEND A 3-HOUR POWERFUL LIVE WORKSHOP ON ADVANCED EXCEL.",
+                    "NO PRIOR TECHNICAL EXCEL KNOWLEDGE REQUIRED",
+                    "TOP 10% OF EXCEL USERS WHO CAN USE THE FUNCTIONS SMARTLY",
+                ],
+            }
+        ];
+
+        function displayWorkshopDetails(data) {
+            workshopDetails.innerHTML = '';
+            data.forEach((item, index) => {
+                const workshopCard = document.createElement('div');
+                workshopCard.className = 'card mb-3';
+                workshopCard.innerHTML = `
+                    <div class="card-body">
+                        <h5 class="card-title">${item.title}</h5>
+                        <p class="card-text">${item.content}</p>
+                        <img src="${item.imageSrc}" alt="Workshop Image" class="img-fluid">
+                        <a href="${item.buttonLink}" class="btn btn-primary">${item.buttonText}</a>
+                    </div>
+                `;
+                workshopDetails.appendChild(workshopCard);
+            });
+        }
+
+        function addWorkshopDetails(data) {
+            const newWorkshop = {
+                title: workshopForm.title.value,
+                content: workshopForm.content.value,
+                imageSrc: workshopForm.imageSrc.value,
+                buttonText: workshopForm.buttonText.value,
+                buttonLink: workshopForm.buttonLink.value,
+            };
+
+            data.push(newWorkshop);
+
+            workshopForm.reset();
+
+            displayWorkshopDetails(data);
+        }
+
+        workshopForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            addWorkshopDetails(workshopData);
+        });
+
+        displayWorkshopDetails(workshopData);
+    </script>
+
+    <!-- Add Bootstrap 4 JS via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    <script src="js/workshop_multiple.js"></script>
+</body>
+</html>

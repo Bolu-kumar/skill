@@ -1,0 +1,472 @@
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+}
+
+.popup-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style for the registration link */
+.registration-link {
+  text-align: center;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .popup-content {
+      width: 500%; /* Set to full width for screens with a maximum width of 768px (typical for mobile devices) */
+  }
+}
+
+
+
+/* Add this CSS in your stylesheet */
+.img-responsive .logo {
+    max-width: 100%;
+    height: auto;
+  }
+  
+.breaking-news-bar {
+    /* background-color: #333; */
+    color: white;
+
+  }
+  
+  .news {
+    background-color: #14c6f3 !important;
+    overflow: hidden;
+
+  }
+  
+  .breaking-news-slide {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: marquee 10s linear infinite; /* Adjust duration as needed */
+  }
+  
+  .breaking-news-link {
+    display: flex;
+    text-decoration: none;
+    position: relative;
+    /* Add a z-index to prevent hover interruption */
+    z-index: 1;
+  }
+  
+  .breaking-news-title {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  
+  .breaking-news-headline {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+  }
+  
+  /* Pause animation on hover */
+  .breaking-news-link:hover .breaking-news-headline {
+    animation-play-state: paused;
+  }
+  
+  /* Resume animation on mouseleave */
+  .breaking-news-link:hover .breaking-news-headline:hover {
+    animation-play-state: running;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+ 
+  /* CSS for the video frame */
+  .video-item {
+    margin: 0px; /* Adjust the margin to create spacing between videos */
+  }
+
+
+  /* CSS for the video frame */
+  .video-thumbnail {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .small-video-frame {
+    max-width: 100%;
+    height: 150px; /* Set a fixed height for the small video */
+  }
+
+  
+    /* Styles specific to desktop */
+    @media (min-width: 768px) {
+      .video-item {
+        margin: 42px; /* Adjust the margin to create spacing between videos */
+      }
+    }
+  
+  
+
+/* about  */
+
+#content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+
+}
+
+h2 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+  /* workshop */
+
+  body {
+    font-family: 'Overpass', sans-serif;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin: 60px auto 20px auto;
+  
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222;
+  }
+  
+  .section-header-underline {
+    border: 1px solid #222;
+    width: 3rem;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  
+  .video-gallery {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: center;
+  }
+  
+  .video-gallery .gallery-item {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 320px;
+    max-width: 580px;
+    max-height: 360px;
+    width: 48%;
+    background: #000;
+    cursor: pointer;
+  }
+  
+  .video-gallery .gallery-item img {
+    position: relative;
+    display: block;
+    opacity: .45;
+    width: 105%;
+    height: 300px;
+    transition: opacity 0.35s, transform 0.35s;
+    transform: translate3d(-23px, 0, 0);
+    backface-visibility: hidden;
+  }
+  
+  .video-gallery .gallery-item .gallery-item-caption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+  }
+  
+  .video-gallery .gallery-item .gallery-item-caption,
+  .video-gallery .gallery-item .gallery-item-caption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .video-gallery .gallery-item h2 {
+    font-weight: 300;
+    overflow: hidden;
+    padding: 0.5em 0;
+  }
+  
+  
+  .video-gallery .gallery-item h2,
+  .video-gallery .gallery-item p {
+    position: relative;
+    margin: 0;
+    z-index: 10;
+  }
+  
+  .video-gallery .gallery-item p {
+    letter-spacing: 1px;
+    font-size: 68%;
+  
+    padding: 1em 0;
+    opacity: 0;
+    transition: opacity 0.35s, transform 0.35s;
+    transform: translate3d(10%, 0, 0);
+  }
+  
+  .video-gallery .gallery-item:hover img {
+    opacity: .3;
+    transform: translate3d(0, 0, 0);
+  
+  }
+  
+  .video-gallery .gallery-item .gallery-item-caption {
+    text-align: left;
+  }
+  
+  .video-gallery .gallery-item h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 15%;
+    height: 1px;
+    background: #fff;
+    
+    transition: transform 0.3s;
+    transform: translate3d(-100%, 0, 0);
+  }
+  
+  .video-gallery .gallery-item:hover h2::after {
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .video-gallery .gallery-item:hover p {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  @media screen and (max-width: 50em) {
+    .video-gallery .gallery-item {
+      display: inline-block;
+      float: none;
+      margin: 10px auto;
+      width: 100%;
+    }
+  }
+
+  
+  .video-thumbnail {
+    display: block;
+    width: 100%; /* Set the width to 100% to fill the column */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+/* Faqs */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,800);
+
+
+.content {
+  width: 80%;
+  padding: 20px;
+  margin: 0 auto;
+  padding: 0 60px 0 0;
+}
+
+.centerplease {
+  margin: 0 auto;
+  max-width: 270px;
+  font-size: 40px;
+}
+
+.question {
+  position: relative;
+  color: #808080;
+  margin: 0;
+  padding: 10px 10px 10px 50px;
+  display: block;
+  width:100%;
+  cursor: pointer;
+}
+
+.answers {
+  background: #ffffff;
+  padding: 0px 15px;
+  margin: 5px 0;
+  max-height: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: .7s ease;
+  -moz-transition: .7s ease;
+  -o-transition: .7s ease;
+  transition: .7s ease;
+}
+
+.questions:checked ~ .answers{
+  max-height: 500px;
+  opacity: 1;
+  padding: 15px;
+}
+
+.plus {
+  position: absolute;
+  color:#fff;
+  margin-left: 0px;
+  z-index: 5;
+  font-size: 2em;
+  line-height: 100%;
+  -webkit-user-select: none;    
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.questions:checked ~ .plus {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.questions {
+  display: none;
+}
+
+#faqs{
+  margin-bottom: -100px;;
+}
+/* course json */
+
+ /* Add CSS styles for responsive design here */
+ .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-lg-4 {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+
+@media (max-width: 768px) {
+  .col-lg-4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-lg-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+}
+
+
+
+/* Contact form styles */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form {
+  display: grid;
+  gap: 1em;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+/* Workshop */
+    /* Common styles for both mobile and desktop */
+    .bg-registration {
+        background-color: #007bff;
+    }
+
+    .bg-primary {
+        background-color: #007bff;
+    }
+
+    /* Styles specific to desktop */
+    @media (min-width: 768px) {
+        .bg-registration {
+            padding-top: 0px;
+        }
+    }
+
+    /* Styles specific to mobile */
+    @media (max-width: 767px) {
+        .bg-registration {
+            padding-top: 0px;
+        }
+
+        /* Add this CSS for right-aligned text within <ul> for mobile */
+        ul.text-white {
+            text-align: left;
+        }
+    }
+
+

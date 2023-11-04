@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Workshop</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free HTML Templates" name="keywords">
+        <meta content="Free HTML Templates" name="description">
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/mystyles.css" rel="stylesheet">
+        <!-- firebase-app confi-->
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+        <style>
+          .alert {
+            display: none;
+          }
+        </style>
+      </head>
+<body>
+    <div class="container-fluid news">
+        <div class="row">
+          <div class="breaking-news-bar">
+            <div class="breaking-news-slide">
+              <a href="#" class="breaking-news-link">
+                <span class="breaking-news-title">Announcement</span>
+                <div class="breaking-news-headline text-white"> Attend a 3-hour Powerful Live Workshop on Data Analysis Using advanced Excel. </div>
+              </a>
+            </div>
+            <!-- Add more breaking-news-slide elements for additional news items -->
+          </div>
+        </div>
+      </div>
+      <!-- Navbar Start -->
+      <div class="container-fluid">
+        <div class="row border-top px-xl-5 py-3">
+          <div class="col-lg-3 d-none d-lg-block">
+            <a href="https://itfinisher.com/">
+              <img class="logo" src="img/itfinisher-logo.png" alt="">
+            </a>
+          </div>
+          <div class="col-2"></div>
+          <div class="col-lg-7">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+              <a href="" class="text-decoration-none d-block d-lg-none">
+                <img class="logo" src="img/itfinisher-logo.png" alt="">
+              </a>
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav py-0">
+                  <a href="index.html" class="nav-item nav-link active">Home</a>
+                  <a href="#courses" class="nav-item nav-link">Courses</a>
+                  <a href="#about" class="nav-item nav-link">About</a>
+                  <a href="#youtube" class="nav-item nav-link">Videos</a>
+                  <a href="#faqs" class="nav-item nav-link">FAQs</a>
+                  <a href="#contact" class="nav-item nav-link">Contact</a>
+                  <!-- "Request Demo" link to open the modal -->
+                  <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Request</a>
+                </div>
+                <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="#registration">Live Workshop</a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar End -->
+  
+  
+  <!-- About Start -->
+  <section id="about">
+    <div class="text-center">
+      <h1 class="display-5 mb-0 text-center py-5" style="padding-bottom: 100px;">About Us
+       <hr class="custom-hr mx-auto bg-primary" style="width: 12%;">
+    </div>
+    <div id="content">
+      <!-- JSON data will be displayed here -->
+    </div>
+    </div>
+  </section>
+  <!-- About End -->
+
+ <!-- Footer Start -->
+ <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+    <div class="row pt-5">
+      <div class="col-lg-7 col-md-12">
+        <div class="row">
+          <div class="col-md-6 mb-5">
+            <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get In Touch</h5>
+            <p class="text-white">
+              <i class="fa fa-map-marker-alt mr-2"></i>Head Office: Near Infosys, Mysore, Karnataka (570027)
+            </p>
+            <p class="text-white">
+              <i class="fa fa-phone-alt mr-2"></i>+919795298083
+            </p>
+            <p class="text-white">
+              <i class="fa fa-envelope mr-2"></i>it.finisher@gmail.com
+            </p>
+            <div class="d-flex justify-content-start mt-4 text-white">
+              <a class="btn btn-outline-light btn-square mr-2" href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a class="btn btn-outline-light btn-square mr-2" href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a class="btn btn-outline-light btn-square mr-2" href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a class="btn btn-outline-light btn-square" href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Our Training</h5>
+            <div class="d-flex flex-column justify-content-start">
+              <a class="text-white mb-2" href="#">
+                <i class="fa fa-angle-right mr-2"></i>Advanced Excel </a>
+              <a class="text-white mb-2" href="#">
+                <i class="fa fa-angle-right mr-2"></i>Advanced Word </a>
+              <a class="text-white mb-2" href="#">
+                <i class="fa fa-angle-right mr-2"></i>Advanced Office 365 </a>
+                <a class="text-white mb-2" href="#">
+                  <i class="fa fa-angle-right mr-2"></i>Data Analyst </a>
+              <a class="text-white" href="#">
+                <i class="fa fa-angle-right mr-2"></i>Website Development </a>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-12 mb-5">
+        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">About Us</h5>
+        <p class="text-white">
+          We believe in empowering professionals to become the best versions of themselves in the rapidly evolving digital world. We are providing innovative workshops and masterclasses designed to enhance skills, boost productivity, and help professionals achieve their career goals.</p>          
+          <div class="w-100">
+          <div class="input-group">
+            <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
+            <div class="input-group-append">
+              <button class="btn btn-primary px-4">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+    <section class="copyright my-0">
+      <div class="bg-dark">
+        <p class="text-center text-white py-3" style="margin-bottom: auto"> All rights reserved © 2023 | IT Finisher </p>
+      </div>
+    </section>
+  </div>
+  <!-- Footer End -->
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top">
+    <i class="fa fa-angle-double-up"></i>
+  </a>
+
+
+</body>
+
+
+
+
+ <!-- Bootstrap JavaScript and jQuery -->
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ <!-- Other JavaScript Libraries -->
+ <script src="lib/easing/easing.min.js"></script>
+ <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+ <script src="js/about.js"></script>
+</html>
+
+   
