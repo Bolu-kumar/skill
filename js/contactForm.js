@@ -48,5 +48,5 @@ form.addEventListener("submit", (e) => {
   setTimeout(() => {
     alert.style.display = "none"; // Hide the alert after a delay
     form.reset(); // Reset the form after the delay
-  }, 2000);
+  }, 3000);
 });
