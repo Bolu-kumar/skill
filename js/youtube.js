@@ -1,32 +1,17 @@
 var videoData = [
   {
-      "title": "Video 1",
-      "url": "https://www.youtube.com/embed/Ki4YUA8F3k4",
+      "title": "Excel Basics: Essential Functions & Formulas",
+      "url": "https://www.youtube.com/embed/pvyfhWVzOE0",
       "size": "large"
   },
   {
-      "title": "Video 2",
-      "url": "https://www.youtube.com/embed/Ki4YUA8F3k4",
+      "title": "IF Function",
+      "url": "https://www.youtube.com/embed/CPtZfScmp30",
       "size": "large"
   },
   {
-      "title": "Video 3",
-      "url": "https://www.youtube.com/embed/Ki4YUA8F3k4",
-      "size": "large"
-  },
-  {
-      "title": "Video 4",
-      "url": "https://www.youtube.com/embed/Ki4YUA8F3k4",
-      "size": "large"
-  },
-  {
-      "title": "Video 5",
-      "url": "https://www.youtube.com/embed/Ki4YUA8F3k4",
-      "size": "large"
-  },
-  {
-      "title": "Video 6",
-      "url": "https://www.youtube.com/embed/Ki4YUA8F3k4",
+      "title": "Basic VLOOKUP Introduction",
+      "url": "https://www.youtube.com/embed/hpY10Sf29_E",
       "size": "large"
   }
 ];
