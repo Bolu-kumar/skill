@@ -19,23 +19,27 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-const ref = database.ref("contactForm");
+const ref = database.ref("paymentDetails");
+
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const name = document.getElementById("name").value;
-  // const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-
-  const message = document.getElementById("message").value;
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const course = document.getElementById("course").value;
+    const upiid = document.getElementById("upi-id").value;
+    const message = document.getElementById("message").value;
 
 
 
   ref.push({
     name: name,
-    // email: email,
     phone: phone,
+    email: email,
+    course:course,
+    upiid:upiid,
     message: message,
     timestamp: firebase.database.ServerValue.TIMESTAMP,
 
@@ -43,11 +47,21 @@ form.addEventListener("submit", (e) => {
 
 
 
-  alert.style.display = "block";
+  alert.style.display = "block"; // Display the alert
 
+  // After the first 10 seconds
   setTimeout(() => {
-    alert.style.display = "none"; // Hide the alert after a delay
-    form.reset(); // Reset the form after the delay
-  }, 3000);
+    alert.style.display = "none"; // Hide the alert
+    form.reset(); // Reset the form
+    // Redirect to the specified URL
+    // window.location.href = "http://www.itfinisher.com";
+    const phoneNumber = "+919795298080";
+    const message = "Hi, I have bought your course. How do I get access?";
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+    window.location.href = whatsappURL;
+  }, 5000);
+  
+
 });
+
 

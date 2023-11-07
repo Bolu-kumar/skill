@@ -32,12 +32,14 @@
       <div class="row">
         <div class="breaking-news-bar">
           <div class="breaking-news-slide">
-            <a href="payments.html" class="breaking-news-link">
+              <a href="#" class="breaking-news-link" data-toggle="modal" data-target="#paymentModal">
+
               <span class="breaking-news-title">Announcement</span>
               <div class="breaking-news-headline text-white"> Attend a 3-hour Powerful Live Workshop on Data Analysis Using advanced Excel. </div>
             </a>
           </div>
           <!-- Add more breaking-news-slide elements for additional news items -->
+          
         </div>
       </div>
     </div>
@@ -172,7 +174,84 @@
         </div>
       </div>
     </section>
-    <!-- Contact Modal -->
+<!-- Payment Modal -->
+    <section id="contact-forms">    
+      <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">    
+        <div class="modal-dialog">    
+          <div class="modal-content">    
+            <div class="modal-header">    
+              <h5 class="modal-title text-right" id="contactModalLabel" style="text-align: text-right !important;">Enroll in live Workshop
+              </h5>    
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <!-- Create a close button for the modal -->
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+    
+            <div class="modal-body">
+              <!-- Create the modal body -->
+              <section id="contact-forms">    
+                <main>    
+                  <div class="contact-form">    
+                    <div class="alert alert-success text-center" role="alert">
+                      <!-- Create a success alert message -->
+                      Your request has been successfully submitted! Our team will contact shortly!
+                    </div>
+                    <img src="img/Qr-code/Word99.png" alt="QR Code" class="qr-code img-fluid border-0" />    
+                    <form id="paymentForm">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" required />
+                      <label for="phone">Phone:</label>
+                      <input type="tel" id="phone" name="phone" pattern="^\+?\d{10,14}$" required />
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" required />
+                      <label for="upi-id">UPI Transaction 12-Digit ID e.g 33XXXXXXXX00:</label>
+                      <input type="text" id="upi-id" name="upi-id" pattern="^\d{12}$" required />
+                      <p>Please verify your UPI/UTR TXN ID before entering it**.</p>
+
+                      <ul>
+                        <!-- Create an unordered list -->
+                        <li>Get free Materials for practice</li>
+                        <li>Get access to our private community</li>
+                        <li>you will learn project-oriented</li>
+                        <li>WhatsApp: +919350125817</li>
+                      </ul>
+                      <div class="modal-footer">
+                        <br>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                          Close
+                        </button>
+                        <button id="submit" type="submit" class="btn btn-success">Submit
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </main>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+<!-- FAQ star  -->
+    <section id="faqs" class="py-5">
+      <div class='text-center'>
+        <h1 class="animated-section display-5 mb-0 text-center py-5" style="margin-bottom: -1000px;">Frequently Asked Questions
+          <hr class="custom-hr mx-auto bg-primary" style="width: 12%;">
+        </h1>
+      </div>
+      <br>
+      <div class="container faqsContent">
+        <!-- FAQ items will be generated here dynamically using JavaScript -->
+      </div>
+    </section>
+
+<!-- FAQ end  -->
+
+
+ <!-- Contact Modal -->
     <section id="contact-forms">
       <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -211,24 +290,7 @@
       </div>
     </section>
     
-
-
-    <!-- FAQ star  -->
-    <section id="faqs" class="py-5">
-      <div class='text-center'>
-        <h1 class="animated-section display-5 mb-0 text-center py-5" style="margin-bottom: -1000px;">Frequently Asked Questions
-          <hr class="custom-hr mx-auto bg-primary" style="width: 12%;">
-        </h1>
-      </div>
-      <br>
-      <div class="container faqsContent">
-        <!-- FAQ items will be generated here dynamically using JavaScript -->
-      </div>
-    </section>
-
-        <!-- FAQ end  -->
-
-    <!-- Contact Start -->
+<!-- contact start  -->
     <section id="contact" class="py-5">
       <div class="container">
         <h1 class="display-5 mb-0 text-center py-5" style="padding-bottom: 100px;">Contact Us
@@ -501,6 +563,7 @@
     <script src="js/videos.js"></script>
     <script src="js/about.js"></script>
     <script src="js/contactForm.js"></script>
+    <script src="js/payment.js"></script>
     <script src="js/workshop_multiple.js"></script>
     <script src="js/myprojects.js"></script>
     <script src="js/faqs.js"></script>
@@ -514,5 +577,7 @@
         }, 2000);
       });
     </script>
+
+    
  </body>
 </html>

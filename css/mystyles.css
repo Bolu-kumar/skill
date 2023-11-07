@@ -75,7 +75,7 @@ ul#web-tab-menu {
     height: auto;
   }
   
-.breaking-news-bar {
+  .breaking-news-bar {
     /* background-color: #333; */
     color: white;
 
@@ -122,6 +122,7 @@ ul#web-tab-menu {
   .breaking-news-link:hover .breaking-news-headline {
     animation-play-state: paused;
   }
+
   
   /* Resume animation on mouseleave */
   .breaking-news-link:hover .breaking-news-headline:hover {
@@ -136,8 +137,7 @@ ul#web-tab-menu {
       transform: translateX(-100%);
     }
   }
-  
- 
+
   /* CSS for the video frame */
   .video-item {
     margin: 0px; /* Adjust the margin to create spacing between videos */
@@ -500,3 +500,18 @@ button {
     }
 
 
+/* QR code */
+.qr-code {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  margin-left: 100px;
+  border: none !important; /* Remove the border */
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2); 
+
+}
+
+select {
+  height: 40px; /* Adjust the height as needed */
+  border-radius: 2px;;
+}
