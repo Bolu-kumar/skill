@@ -149,11 +149,18 @@ form li {
     display: none;
   }
 
-.alert
-  {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  }
+/* Default styles for the alert message */
+.alert {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto; /* Set the width to auto by default */
+}
+
+/* Media query for mobile devices (up to 768px) */
+@media (max-width: 768px) {
+    .alert {
+        width: 100%; /* Make it full width on mobile devices */
+    }
+}
