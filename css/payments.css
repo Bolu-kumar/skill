@@ -148,3 +148,12 @@ form li {
 .alert {
     display: none;
   }
+
+.alert
+  {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  }
