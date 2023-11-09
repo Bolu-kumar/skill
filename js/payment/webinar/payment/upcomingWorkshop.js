@@ -1,4 +1,4 @@
-// ---------------------------contact-us Forms ------------------------
+// ---------------------------Payments Forms ------------------------
 const form = document.getElementById("paymentForm");
 const alert = document.querySelector(".alert");
 
@@ -10,16 +10,17 @@ const firebaseConfig = {
     projectId: "it-finisher-training-centre",
     storageBucket: "it-finisher-training-centre.appspot.com",
     messagingSenderId: "288743415064",
-    appId: "1:288743415064:web:24d1d8fa2f0806c69b526d",
-    measurementId: "G-1Z4K8YX898"
+    appId: "1:288743415064:web:c9dca1eb8972832a9b526d",
+    measurementId: "G-CGHK9YFLBE"
   };
+
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-const ref = database.ref("paymentDetails");
+const ref = database.ref("upcomingWorkshopEnrollCustPayDetails");
 
 
 form.addEventListener("submit", (e) => {
@@ -28,9 +29,8 @@ form.addEventListener("submit", (e) => {
     const name = document.getElementById("name").value;
     const phone = document.getElementById("phone").value;
     const email = document.getElementById("email").value;
-    const course = document.getElementById("course").value;
+    const subject = document.getElementById("subject").value;
     const upiid = document.getElementById("upi-id").value;
-    const message = document.getElementById("message").value;
 
 
 
@@ -38,9 +38,8 @@ form.addEventListener("submit", (e) => {
     name: name,
     phone: phone,
     email: email,
-    course:course,
+    subject:subject,
     upiid:upiid,
-    message: message,
     timestamp: firebase.database.ServerValue.TIMESTAMP,
 
   });
@@ -55,7 +54,7 @@ form.addEventListener("submit", (e) => {
     form.reset(); // Reset the form
     // Redirect to the specified URL
     // window.location.href = "http://www.itfinisher.com";
-    const phoneNumber = "+919795298080";
+    const phoneNumber = "+919350125817";
     const message = "Hi, I have bought your course. How do I get access?";
     const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
     window.location.href = whatsappURL;

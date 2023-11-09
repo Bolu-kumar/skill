@@ -41,15 +41,15 @@
   // Trigger the popup after a 5-second delay
   setTimeout(function () {
     var jsonData = {
-        "title": "JOIN LIVE WORKSHOP!!",
+        "title": "JOIN LIVE EXCEL WORKSHOP!!",
         "content": [
-            "📅11-Nob-2023 |   ⏰11:00 AM  |    📌2+ Hrs  | 📼Live on Zoom/Teams",
+            "📅 Nov 24, 2023 | ⏰ 11:00 AM | ⌛: 3 hrs| 📼Live on Zoom/Teams",
             "➡️ ATTEND A 3-HOUR LIVE EXCEL WORKSHOP",
             "➡️ THE ADVANCE DATA ANALYTICS USING MS EXCEL",
             "➡️ NO PRIOR EXCEL KNOWLEDGE REQUIRED",
             "➡️ BECOME IN TOP 10% OF EXCEL USERS"
         ],
-        "registrationLink": "your-registration-link",
+        "registrationLink": "live-workshop-Registration.html",
         "imageSrc": "img/course/office0.png",
         "imageAlt": "Image Alt Text"
     };

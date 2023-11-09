@@ -3,6 +3,7 @@ var courseData = {
     "courses": [
       {
         "title": "Microsoft Office 365",
+        "update": "(Coming Soon**)",
         "image": "img/course/office0.png",
         "students": "50+ Students",
         "duration": "3+ Hrs",
@@ -12,6 +13,7 @@ var courseData = {
       },
       {
         "title": "Best Excel courses for beginner",
+        "update": "(Coming Soon**)",
         "image": "img/course/excel0.png",
         "students": "100+ Students",
         "duration": "2+ Hrs",
@@ -21,6 +23,7 @@ var courseData = {
       },
       {
         "title": "Best PPT courses for beginner",
+        "update": "(Coming Soon**)",
         "image": "img/course/ppt0.png",
         "students": "100 Students",
         "duration": "01h 30m",
@@ -30,6 +33,7 @@ var courseData = {
       },
       {
         "title": "Best Microsoft Word courses for beginner",
+        "update": "(Coming Soon**)",
         "image": "img/course/word0.png",
         "students": "200 Students",
         "duration": "2+ Hrs",
@@ -39,6 +43,7 @@ var courseData = {
       },
       {
         "title": "Premium MS Excel courses for beginner",
+        "update": "(Coming Soon**)",
         "image": "img/course/excel99.png",
         "students": "100 Students",
         "duration": "3+ Hrs",
@@ -48,6 +53,7 @@ var courseData = {
       },
       {
         "title": "Best Wordpress Website Builder courses",
+        "update": "(Coming Soon**)",
         "image": "img/course/wordpress99.png",
         "students": "250 Students",
         "duration": "3+ Hrs",
@@ -70,7 +76,7 @@ function createCourseHTML(course) {
                         <small class="m-0"><i class="fa fa-users text-primary mr-5">${course.students}</i></small>
                         <small class="m-0"><i class="fa-solid fa-watch text-primary"></i>${course.duration}</i></small>
                     </div>
-                    <a class="h5" href="">${course.title}</a>
+                    <a class="h5" href="">${course.title} <span class="text-warning"> ${course.update}</span></a>
                     <div class="border-top mt-4 pt-4">
                         <div class="d-flex justify-content-between">
                             <h6 class="m-0"><i class="fa fa-star text-primary mr-2">${course.rating} <small>(${course.reviews})</small></i></h6>

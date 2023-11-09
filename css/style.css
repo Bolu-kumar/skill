@@ -407,7 +407,7 @@ h4, .h4 {
 
 @media (max-width: 1200px) {
   h4, .h4 {
-    font-size: calc(1.275rem + 0.3vw) ;
+    font-size: calc(4.93vw);
   }
 }
 

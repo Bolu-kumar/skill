@@ -94,7 +94,7 @@ ul#web-tab-menu {
     padding: 5px 10px;
     white-space: nowrap;
     overflow: hidden;
-    animation: marquee 10s linear infinite; /* Adjust duration as needed */
+    animation: marquee 25s linear infinite; /* Adjust duration as needed */
   }
   
   .breaking-news-link {
@@ -549,7 +549,7 @@ select {
   /* Adjust container max-width for larger screens */
   #workshopMultiple img {
     max-width: 1024px;
-    margin: 15px;
+    margin: 0px;
     background-color: black;
   }
 
