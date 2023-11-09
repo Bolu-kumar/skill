@@ -3,7 +3,7 @@ const data = {
     "Vision": "Our vision is to be the premier destination for individuals looking to enhance their IT skills and become industry-ready professionals.",
     "Mission": "Our mission is to empower aspiring IT professionals by providing them with high-quality training and resources, enabling them to become proficient and confident IT finishers.",
     "Founders": "Founded by IT industry experts with a passion for education, our institute benefits from the leadership of professionals who have decades of experience in the tech world. They are committed to passing on their knowledge and expertise to the next generation of IT professionals.",
-    "Impact": "Since our establishment in [Year], we have successfully trained and certified over [Number] individuals, preparing them for successful careers in the IT field. Our graduates have gone on to secure positions in leading tech companies and contribute to the advancement of the industry."
+    "Impact": "Since our establishment in 2020, we have successfully trained and certified over 10k+ individuals, preparing them for successful careers in the IT field. Our graduates have gone on to secure positions in leading tech companies and contribute to the advancement of the industry."
 };
 
 const contentDiv = document.getElementById('content');

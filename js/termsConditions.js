@@ -1,5 +1,4 @@
     const data = {
-        "IT Finisher Terms and Conditions:": "",
         "Acceptance Of Terms": "By accessing or using IT Finisher's services, including this website (itfinisher.com), you agree to be bound by these terms and conditions. If you do not agree to these terms, please refrain from using our services.",
         "Privacy Policy": "We respect your privacy and protect your personal information in accordance with our Privacy Policy. Please review our Privacy Policy to understand how we collect, use, and secure your data.",
         "Use Of Services": "You agree to use IT Finisher's services only for lawful purposes and in a way that does not infringe upon the rights of others, inhibit the use and enjoyment of the services by others, or violate applicable laws and regulations.",
@@ -10,17 +9,14 @@
         "Contact Us": "If you have any questions or concerns regarding these terms and conditions, please contact us at it.finisher@gmail.com."
     }
 
-    const contentDiv = document.getElementById('modalContent');
-    const keys = Object.keys(data);
+   
 
-    keys.forEach(key => {
-        const section = document.createElement('div');
-        section.innerHTML = `<h4>${key}</h4><p>${data[key]}</p>`;
-        contentDiv.appendChild(section);
-    });
+const contentDiv = document.getElementById('content');
+const keys = Object.keys(data);
 
-    // Show modal when the "Dismiss" button is clicked
-    const showTermsButton = document.getElementById('showTermsButton');
-    showTermsButton.addEventListener('click', () => {
-        $('#termsModal').modal('show');
-    });
+keys.forEach(key => {
+    const section = document.createElement('div');
+    section.innerHTML = `<h2>${key}</h2><p>${data[key]}</p>`;
+    contentDiv.appendChild(section);
+});
+

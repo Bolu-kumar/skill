@@ -48,6 +48,7 @@ ul#web-tab-menu {
   padding: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 80%;
+
 }
 
 .popup-image {
@@ -514,4 +515,47 @@ button {
 select {
   height: 40px; /* Adjust the height as needed */
   border-radius: 2px;;
+}
+
+
+.alert {
+  display: none;
+}
+/* Default styles for the alert message */
+.alert {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto; /* Set the width to auto by default */
+}
+
+/* Media query for mobile devices (up to 768px) */
+@media (max-width: 768px) {
+  .alert {
+      width: 100%; /* Make it full width on mobile devices */
+  }
+}
+
+
+#workshopMultiple {
+  max-width: 100%;
+  padding: 0;
+  margin: 0; /* Remove margin to make it full width */
+}
+
+/* Responsive styles for smaller screens (mobile) */
+@media (max-width: 768px) {
+  /* Adjust container max-width for larger screens */
+  #workshopMultiple img {
+    max-width: 1024px;
+    margin: 15px;
+    background-color: black;
+  }
+
+  .card-body {
+    max-width: 1024px;
+    margin: 15px;
+    background-color: rgb(253, 247, 247);
+  }
 }

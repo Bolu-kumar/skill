@@ -18,6 +18,7 @@
 
       // Populate the popup with JSON data
       document.getElementById("popupTitle").textContent = data.title;
+
       var contentDiv = document.getElementById("popupContent");
       contentDiv.innerHTML = "";
       data.content.forEach(function (item) {
@@ -35,19 +36,22 @@
       popup.style.display = "none";
   }
 
+
+
   // Trigger the popup after a 5-second delay
   setTimeout(function () {
-      var jsonData = {
-          "title": "JOIN WORKSHOP NOW!!",
-          "content": [
-              "➡️ ATTEND A 3-HOUR POWERFUL LIVE WORKSHOP ON ADVANCED EXCEL.",
-              "➡️ THE ADVANCE DATA ANALYTICS USING MS EXCEL",
-              "➡️ NO PRIOR TECHNICAL EXCEL KNOWLEDGE REQUIRED",
-              "➡️ TOP 10% OF EXCEL USERS WHO CAN USE THE FUNCTIONS SMARTLY"
-          ],
-          "registrationLink": "your-registration-link",
-          "imageSrc": "img/course/office0.png",
-          "imageAlt": "Image Alt Text"
-      };
-      openAndPopulatePopup(jsonData);
-  }, 5000);
+    var jsonData = {
+        "title": "JOIN LIVE WORKSHOP!!",
+        "content": [
+            "📅11-Nob-2023 |   ⏰11:00 AM  |    📌2+ Hrs  | 📼Live on Zoom/Teams",
+            "➡️ ATTEND A 3-HOUR LIVE EXCEL WORKSHOP",
+            "➡️ THE ADVANCE DATA ANALYTICS USING MS EXCEL",
+            "➡️ NO PRIOR EXCEL KNOWLEDGE REQUIRED",
+            "➡️ BECOME IN TOP 10% OF EXCEL USERS"
+        ],
+        "registrationLink": "your-registration-link",
+        "imageSrc": "img/course/office0.png",
+        "imageAlt": "Image Alt Text"
+    };
+    openAndPopulatePopup(jsonData);
+}, 5000);

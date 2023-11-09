@@ -21,11 +21,7 @@
     <!-- firebase-app confi-->
     <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
-    <style>
-      .alert {
-        display: none;
-      }
-    </style>
+    
   </head>
   <body>
     <div class="container-fluid news">
@@ -85,7 +81,7 @@
                 <!-- "Request Demo" link to open the modal -->
                 <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Support</a>
               </div>
-              <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="#registration">Live Workshop</a>
+              <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block text-center" href="#registration">Live Workshop</a>
             </div>
           </nav>
         </div>
@@ -112,12 +108,12 @@
       </div>
     </section>
     <!-- Courses end -->
-    <!-- Single Registration Start -->
-    <section class="workshop">
-      <div id="workshopMultiple">
-        <!-- JSON Data will be rendered here -->
+     <!-- Workshop Section HTML -->
+     <section class="workshop">
+      <div class="container-fluid" id="workshopMultiple">
+          <!-- JSON Data will be rendered here -->
       </div>
-    </section>
+  </section>
 
  
     <section id="popAuto">
@@ -127,7 +123,8 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeAutoPopup()">
                 <span aria-hidden="true">&times;</span>
             </button>
-            <h3 class="text-center text-dark" id="popupTitle"></h3>
+            <h3 class="text-center text-dark" id="popupTitle"></h3><br>
+
             <div id="popupContent" class="text-white"></div>
             <p class="registration-link">
                 <a id="registrationLink" target="_blank">Become a professional in Excel! Click Here for Registration👇</a>
@@ -136,6 +133,8 @@
         </div>
     </div>
     </section>
+  
+  
 
 
 
@@ -429,20 +428,18 @@
               </div>
             </div>
             <div class="col-md-6 mb-5">
-              <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Our Training</h5>
+              <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Company</h5>
               <div class="d-flex flex-column justify-content-start">
-                <a class="text-white mb-2" href="excel-workshop.html">
-                  <i class="fa fa-angle-right mr-2"></i>Advanced Excel </a>
-                <a class="text-white mb-2" href="word-workshop.html">
-                  <i class="fa fa-angle-right mr-2"></i>Advanced Word </a>
-                <a class="text-white mb-2" href="office365-workshop.html">
-                  <i class="fa fa-angle-right mr-2"></i>Advanced Office 365 </a>
-                <a class="text-white mb-2" href="data-analyst-workshop.html">
-                  <i class="fa fa-angle-right mr-2"></i>Data Analyst </a>
-                <a class="text-white" href="website-workshop.html">
-                  <i class="fa fa-angle-right mr-2"></i>Website Development </a>
-                  <a class="text-white" href="combo-workshop.html">
-                    <i class="fa fa-angle-right mr-2"></i>Combo-Workshop </a>
+                <a class="text-white mb-2" href="about-us.html">
+                  <i class="fa fa-angle-right mr-2"></i>About Us </a>
+                <a class="text-white mb-2" href="contact-us.html">
+                  <i class="fa fa-angle-right mr-2"></i>Contact Us </a>
+                <a class="text-white mb-2" href="terms-conditions.html">
+                  <i class="fa fa-angle-right mr-2"></i>Terms & Conditions</a>
+                <a class="text-white mb-2" href="privacy-policy.html">
+                  <i class="fa fa-angle-right mr-2"></i>Privacy & Policy</a>
+                <a class="text-white" href="refund-cancellation.html">
+                  <i class="fa fa-angle-right mr-2"></i>Refund & Cancellation</a>
               </div>
             </div>
           </div>
