@@ -53,7 +53,7 @@ form.addEventListener("submit", (e) => {
     form.reset(); // Reset the form
     // Redirect to the specified URL
     // window.location.href = "http://www.itfinisher.com";
-    const phoneNumber = "+919795298080";
+    const phoneNumber = "+919350125817";
     const message = "Hi, I have bought your course. How do I get access?";
     const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
     window.location.href = whatsappURL;
