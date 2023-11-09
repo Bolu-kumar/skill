@@ -21,7 +21,7 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-const ref = database.ref("paymentDetails");
+const ref = database.ref("excelPaymentDetails");
 
 
 form.addEventListener("submit", (e) => {
