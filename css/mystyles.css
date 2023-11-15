@@ -41,7 +41,7 @@ ul#web-tab-menu {
 
 .popup-content {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
@@ -94,7 +94,7 @@ ul#web-tab-menu {
     padding: 5px 10px;
     white-space: nowrap;
     overflow: hidden;
-    animation: marquee 25s linear infinite; /* Adjust duration as needed */
+    animation: marquee 14s linear infinite; /* Adjust duration as needed */
   }
   
   .breaking-news-link {
