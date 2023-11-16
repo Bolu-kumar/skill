@@ -10,6 +10,7 @@ ul#web-tab-menu {
   }
 }
 
+
 /* Whatsapp */
 .whatsapp-icon {
   position: fixed;
@@ -51,6 +52,13 @@ ul#web-tab-menu {
 
 }
 
+@media (min-width: 768px)
+{
+  .popup-content {
+    top: 65%;
+}
+
+}
 .popup-image {
   max-width: 100%;
   height: auto;

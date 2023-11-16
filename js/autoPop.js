@@ -44,13 +44,16 @@
         "title": "JOIN LIVE EXCEL WORKSHOP!!",
         "content": [
             "📅 Nov 24, 2023 | ⏰ 11:00 AM | ⌛: 3 hrs| 📼Live on Zoom/Teams",
-            "➡️ ATTEND A 3-HOUR LIVE EXCEL WORKSHOP",
-            "➡️ THE ADVANCE DATA ANALYTICS USING MS EXCEL",
-            "➡️ NO PRIOR EXCEL KNOWLEDGE REQUIRED",
-            "➡️ BECOME IN TOP 10% OF EXCEL USERS"
+            "✅Module#1. Formatting:(Number, Text, Conditional)",
+            "✅Module#2. Data Validation:(Data Validation)",
+            "✅Module#3. Data Cleanup:(Cleanup, Remove Duplicate, Split into columns)",
+            "✅Module#4. Basic Functions:(SUM, AVERAGE, COUNT)",
+            "✅Module#5. Logical Functions:(IF, AND, OR)",
+            "✅Module#6. Project1: Dynamic Marksheet Generate & Dashboard Design ",
+            "✅Module#7. Project2: Real-time Dynamic Dashboard Design ",
         ],
         "registrationLink": "live-workshop-Registration.html",
-        "imageSrc": "img/course/office0.png",
+        "imageSrc": "img/course/excel-99.png",
         "imageAlt": "Image Alt Text"
     };
     openAndPopulatePopup(jsonData);

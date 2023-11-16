@@ -1,21 +1,30 @@
 var jsonData = [
   
   {
-    "imageSrc": "img/carousel/3.png",
-    "altText": "Image 3",
-  },
-
-  {
-    "imageSrc": "img/carousel/1.png",
+    "imageSrc": "img/carousel/office-199.png",
     "altText": "Image 1",
   },
 
   {
-    "imageSrc": "img/carousel/4.png",
+    "imageSrc": "img/carousel/excel-99.png",
+    "altText": "Image 2",
+  },
+
+  {
+    "imageSrc": "img/carousel/chatgpt-99.png",
+    "altText": "Image 3",
+  },
+  {
+    "imageSrc": "img/carousel/social-media-99.png",
     "altText": "Image 4",
   },
   {
-    "imageSrc": "img/carousel/5.png",
+    "imageSrc": "img/carousel/wordpress-99.png",
+    "altText": "Image 5",
+  },
+
+  {
+    "imageSrc": "img/carousel/job-subscription-499.png",
     "altText": "Image 5",
   },
  
