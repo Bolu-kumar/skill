@@ -41,7 +41,7 @@
   // Trigger the popup after a 5-second delay
   setTimeout(function () {
     var jsonData = {
-        "title": "JOIN LIVE EXCEL WORKSHOP!!",
+        "title": "LIVE EXCEL WORKSHOP!!",
         "content": [
             "📅 Dec 10, 2023 | ⏰ 11:00 AM | ⌛: 3 hrs| 📼Live on Zoom/Teams",
             "✅Module#1. Formatting:(Number, Text, Conditional)",
