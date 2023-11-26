@@ -43,7 +43,7 @@
     var jsonData = {
         "title": "JOIN LIVE EXCEL WORKSHOP!!",
         "content": [
-            "📅 Nov 24, 2023 | ⏰ 11:00 AM | ⌛: 3 hrs| 📼Live on Zoom/Teams",
+            "📅 Dec 10, 2023 | ⏰ 11:00 AM | ⌛: 3 hrs| 📼Live on Zoom/Teams",
             "✅Module#1. Formatting:(Number, Text, Conditional)",
             "✅Module#2. Data Validation:(Data Validation)",
             "✅Module#3. Data Cleanup:(Cleanup, Remove Duplicate, Split into columns)",
