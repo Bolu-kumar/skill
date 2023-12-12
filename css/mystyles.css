@@ -102,7 +102,7 @@ ul#web-tab-menu {
     padding: 5px 10px;
     white-space: nowrap;
     overflow: hidden;
-    animation: marquee 14s linear infinite; /* Adjust duration as needed */
+    animation: marquee 34s linear infinite; /* Adjust duration as needed */
   }
   
   .breaking-news-link {
