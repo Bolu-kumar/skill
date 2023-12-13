@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <title>Certificate Verification Portal</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free HTML Templates" name="keywords">
+        <meta content="Free HTML Templates" name="description">
+        <!-- Favicon -->
+        <link href="img/favicons.png" rel="icon">
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/mystyles.css" rel="stylesheet">
+ 
+</head>
+<body>
+
+<script src="js/header.js"></script>
+
+<div class="container shadow py-3 mt-3">
+  <h1 class="mt-4 py-3 text-center ">Certificate Verification</h1>
+  
+
+
+  <div class="search-container">
+    <input type="text" class="form-control search-input" id="certificateIdInput" placeholder="Search By Certificate number..">
+    <div class="btn-group">
+
+     <button class="btn btn-success btn-custom" type="button" onclick="searchByCertificateId()">
+      <i class="fas fa-search"></i> Search
+  </button>
+  
+  <button class="btn btn-danger btn-custom" type="button" onclick="resetSearch()">
+      <i class="fas fa-sync-alt"></i> Reset
+  </button>
+    </div>
+  </div>
+
+  <div class="table-responsive" id="certificateTable">
+    <table class="table table-bordered table-hover text-center">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Enroll In</th>
+          <th>Enrolled</th>
+          <th>Certificate</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <!-- Data will be populated here -->
+      </tbody>
+    </table>
+  </div>
+
+<section class="mb-5">
+  <div class="py-5">
+    <ul>
+      <li>
+          <p>You can only use the Certificate Number to search and verify certificates.</p>
+      </li>
+      <li>
+          <p>Only Premium Users are allowed to check certificates.</p>
+      </li>
+      <li>
+          <p>These certificates showcase specific skills.</p>
+      </li>
+      <li>
+          <p>You need to pass an online exam to get your certificate.</p>
+      </li>
+      <li>
+          <p>Only students who pass the exam can download their certificates.</p>
+      </li>
+  </ul>
+  </div>
+</section>
+  
+  <p id="notFoundMessage" class="alert alert-warning d-none">Data not found for the provided Certificate number.</p>
+</div>
+
+<script src="js/footer.js"></script>
+
+<!-- -- Bootstrap JavaScript and firebase -->
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+
+
+<script>
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+ const firebaseConfig = {
+   apiKey: "AIzaSyAiIT7QmHfRcQnACWSrLdeoWs6k1Wv8c_U",
+   authDomain: "it-finisher-training-centre.firebaseapp.com",
+   databaseURL: "https://it-finisher-training-centre-default-rtdb.firebaseio.com",
+   projectId: "it-finisher-training-centre",
+   storageBucket: "it-finisher-training-centre.appspot.com",
+   messagingSenderId: "288743415064",
+   appId: "1:288743415064:web:c273c84e633e701b9b526d",
+   measurementId: "G-R3DELMPY36"
+ };
+   firebase.initializeApp(firebaseConfig);
+ 
+   // Reference to your Firebase database
+   var database = firebase.database();
+ 
+   // Reference to 'verifyCertificates' node
+   var verifyCertificatesRef = database.ref('verifyCertificates');
+
+   // Function to format date as dd/mm/yyyy
+  function formatDate(date) {
+    const d = new Date(date);
+    const day = d.getDate().toString().padStart(2, '0');
+    const month = (d.getMonth() + 1).toString().padStart(2, '0');
+    const year = d.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
+ 
+   function searchByCertificateId() {
+     var certificateId = document.getElementById('certificateIdInput').value.trim();
+     var foundData = false;
+ 
+     document.getElementById('table-body').innerHTML = '';
+     document.getElementById('notFoundMessage').classList.add('d-none');
+     document.getElementById('certificateTable').style.display = 'none'; // Hide table before search
+ 
+     verifyCertificatesRef.once('value', function(snapshot) {
+       snapshot.forEach(function(childSnapshot) {
+         var certificateData = childSnapshot.val();
+         var certId = certificateData.Certificate_Id;
+ 
+         if (certId.toString().trim() === certificateId.toString().trim()) {
+           foundData = true;
+           var name = certificateData.Name;
+           var enrollmentInfo = certificateData.Enroll_in;
+           var downloadCertificates = certificateData.DownloadCertificates;
+           var timestamp = certificateData.Timestamp;
+          var enrollDate = formatDate(timestamp); // Format the date
+
+           var tableRow = document.createElement('tr');
+           var nameCell = document.createElement('td');
+           var enrollmentCell = document.createElement('td');
+           var downloadCertificatesCell = document.createElement('td');
+           var enrollDateCell = document.createElement('td');
+ 
+           nameCell.textContent = name;
+           enrollmentCell.textContent = enrollmentInfo;
+           enrollDateCell.textContent = enrollDate;
+ 
+           var downloadButton = document.createElement('a');
+           downloadButton.classList.add('btn', 'btn-primary', 'btn-sm', 'btn-custom'); // Add custom class for button size
+           if (downloadCertificates === 'NA') {
+             var notActiveButton = document.createElement('button');
+             notActiveButton.textContent = 'NA';
+             notActiveButton.classList.add('btn', 'btn-danger', 'btn-sm', 'btn-custom'); // Add custom class for button size
+             downloadCertificatesCell.appendChild(notActiveButton);
+           } else {
+             downloadButton.href = downloadCertificates; // Set the fetched link here
+             downloadButton.target = '_blank';
+             downloadButton.textContent = 'Download';
+             downloadCertificatesCell.appendChild(downloadButton);
+           }
+ 
+           tableRow.appendChild(nameCell);
+           tableRow.appendChild(enrollmentCell);
+           tableRow.appendChild(enrollDateCell);
+           tableRow.appendChild(downloadCertificatesCell);
+ 
+           document.getElementById('table-body').appendChild(tableRow);
+         }
+       });
+ 
+       if (foundData) {
+         document.getElementById('certificateTable').style.display = 'block'; // Show table after search
+       } else {
+         document.getElementById('notFoundMessage').classList.remove('d-none');
+       }
+     });
+   }
+ 
+   function resetSearch() {
+     document.getElementById('certificateIdInput').value = ''; // Clear input
+     document.getElementById('table-body').innerHTML = ''; // Clear table data
+     document.getElementById('certificateTable').style.display = 'none'; // Hide table
+     document.getElementById('notFoundMessage').classList.add('d-none'); // Hide not found message
+   }
+ </script>
+
+</body>
+</html>
+

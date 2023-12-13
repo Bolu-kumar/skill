@@ -567,3 +567,54 @@ select {
     background-color: rgb(253, 247, 247);
   }
 }
+
+/* verification certificate section */
+
+        .input-group {
+      margin-bottom: 20px;
+    }
+
+    .table-responsive {
+      display: none; /* Hide the table by default */
+      border: 1px solid #ddd;
+  
+
+
+
+      border-radius: 5px;
+      margin-top: 80px;
+      background-color: #fff;
+    }
+
+    .alert-warning {
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    /* Style for buttons */
+    .btn-custom {
+      min-width: 90px; /* Adjust the width as needed */
+    }
+
+    .btn-sm {
+      min-width: 90px !important; /* Uniform size for small buttons */
+    }
+
+    /* Adjust search box and button styles */
+    .search-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-input {
+      width: 70%;
+      margin-bottom: 10px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 20px;
+      margin-top: 25px;
+    }
