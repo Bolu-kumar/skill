@@ -531,7 +531,7 @@ select {
 }
 /* Default styles for the alert message */
 .alert {
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -569,6 +569,10 @@ select {
 }
 
 /* verification certificate section */
+/* 
+#notFoundMessage{
+position: fixed !important;
+} */
 
         .input-group {
       margin-bottom: 20px;

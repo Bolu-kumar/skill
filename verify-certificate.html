@@ -32,16 +32,17 @@
 
   <div class="search-container">
     <input type="text" class="form-control search-input" id="certificateIdInput" placeholder="Search By Certificate number..">
+
     <div class="btn-group">
 
      <button class="btn btn-success btn-custom" type="button" onclick="searchByCertificateId()">
       <i class="fas fa-search"></i> Search
   </button>
-  
   <button class="btn btn-danger btn-custom" type="button" onclick="resetSearch()">
       <i class="fas fa-sync-alt"></i> Reset
   </button>
     </div>
+
   </div>
 
   <div class="table-responsive" id="certificateTable">
@@ -58,7 +59,10 @@
         <!-- Data will be populated here -->
       </tbody>
     </table>
+
   </div>
+
+  <p id="notFoundMessage" class="alert alert-warning d-none">Certificate not found for the provided Certificate number.</p>
 
 <section class="mb-5">
   <div class="py-5">
@@ -67,22 +71,16 @@
           <p>You can only use the Certificate Number to search and verify certificates.</p>
       </li>
       <li>
-          <p>Only Premium Users are allowed to check certificates.</p>
-      </li>
-      <li>
           <p>These certificates showcase specific skills.</p>
       </li>
       <li>
-          <p>You need to pass an online exam to get your certificate.</p>
-      </li>
-      <li>
-          <p>Only students who pass the exam can download their certificates.</p>
+          <p>If data is not displaying, please refresh the browser.</p>
       </li>
   </ul>
   </div>
 </section>
   
-  <p id="notFoundMessage" class="alert alert-warning d-none">Data not found for the provided Certificate number.</p>
+
 </div>
 
 <script src="js/footer.js"></script>
@@ -135,6 +133,7 @@
        snapshot.forEach(function(childSnapshot) {
          var certificateData = childSnapshot.val();
          var certId = certificateData.Certificate_Id;
+         
  
          if (certId.toString().trim() === certificateId.toString().trim()) {
            foundData = true;
@@ -176,12 +175,62 @@
            document.getElementById('table-body').appendChild(tableRow);
          }
        });
- 
-       if (foundData) {
-         document.getElementById('certificateTable').style.display = 'block'; // Show table after search
-       } else {
-         document.getElementById('notFoundMessage').classList.remove('d-none');
-       }
+
+
+
+      //  if (certificateId === '') {
+      //           document.getElementById('notFoundMessage').classList.remove('d-none');
+      //           document.getElementById('notFoundMessage').innerText = 'Please enter certificate number.';
+      //           return; // Stop further execution of the function
+      //         }
+      
+      
+    
+    
+      //         if (foundData) {
+      //       document.getElementById('certificateTable').style.display = 'block';
+      //   }
+    
+      //     else {
+      //             document.getElementById('notFoundMessage').classList.remove('d-none');
+      //             document.getElementById('notFoundMessage').classList.add('alert-warning'); // Add Bootstrap alert-warning class
+
+      //             document.getElementById('notFoundMessage').classList.add('alert-dismissible'); // Add Bootstrap alert-dismissible class
+      //             document.getElementById('notFoundMessage').innerHTML =
+      //                   `
+      //                   Certificate not found for the provided Certificate number
+      //                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      //                   <span aria-hidden="true">&times;</span>
+      //                   </button>`; 
+                        
+      //                   // Add close button
+      //             document.getElementById('notFoundMessage').style.display = 'block';
+
+      //   } 
+
+
+
+      if (certificateId === '') {
+         document.getElementById('notFoundMessage').notFoundMessage.classList.remove('d-none');
+          }
+
+    if (foundData) {
+        document.getElementById('certificateTable').style.display = 'block';
+    } else {
+        var notFoundMessage = document.getElementById('notFoundMessage');
+        notFoundMessage.classList.remove('d-none');
+        notFoundMessage.classList.add('alert', 'alert-warning', 'alert-dismissible');
+        notFoundMessage.innerHTML =
+            `
+            Certificate not found for the provided Certificate number
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            `;
+        notFoundMessage.style.display = 'block';
+    }
+
+
      });
    }
  
@@ -195,4 +244,3 @@
 
 </body>
 </html>
-

@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav py-0">
                                 <a href="index.html" class="nav-item nav-link active">Home</a>
-                                <a href="#" class="nav-item nav-link course">Courses</a>
+                                <a href="#" class="nav-item nav-link" id="courseLink">Courses</a>
 
                                 <div class="nav-item dropdown">
                                     <a href="#" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" id="index">Workshop</a>
@@ -55,12 +55,12 @@ document.addEventListener('DOMContentLoaded', function() {
                                     </div>
                                 </div>
 
-                                <a href="#" class="nav-item nav-link youtube">Videos</a>
-                                <a href="#" class="nav-item nav-link faqs">FAQs</a>
-                                <a class="nav-link support" href="#" data-toggle="modal" data-target="#contactModal">Support</a>
+                                <a href="#" class="nav-item nav-link youtube" id="youtube">Videos</a>
+                                <a href="#" class="nav-item nav-link faqs" id="index">FAQs</a>
+                                <a class="nav-link support" href="#" data-toggle="modal" data-target="#contactModal" id="support">Support</a>
                                 <a href="verify-certificate.html" class="nav-item nav-link certificate">Certificate</a>
                             </div>
-                            <a class="btn btn-primary py-2 px-4 ml-auto d-lg-block text-center" href="#registration">Enroll Now</a>
+                            <a class="btn btn-primary py-2 px-4 ml-auto d-lg-block text-center" href="#registration" id="enrollNow">Enroll Now</a>
                         </div>
                     </nav>
                 </div>
@@ -69,12 +69,22 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
         document.body.insertAdjacentHTML('afterbegin', navbar);
 
+
+
+
+
+
+
+
+
+
         const index = document.getElementById('index');
         index.addEventListener('click', function(event) {
             event.preventDefault();
-            window.location.href = 'index.html#workshop'; // Replace 'workshop' with the correct ID of the Workshop section
+            window.location.href = 'index.html'; // Replace 'workshop' with the correct ID of the Workshop section
         });
     
+
         const support = document.getElementById('support');
         support.addEventListener('click', function(event) {
             event.preventDefault();
