@@ -4,7 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiz</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Excel Quiz</title>
+  <meta property="og:title" content="IT Finisher Technical Training Institute | Explore Technology & Career Development">
+  <meta property="og:description" content="Empower your IT career at IT Finisher. Discover technical training programs covering programming, web development, cybersecurity, and more. Explore educational videos, career development tips, and job-related content. Subscribe for the latest updates.">
+  <meta property="og:image" content="https://itfinisher.com/img/thumbnail.png">
+  <meta property="og:url" content="https://www.itfinisher.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="IT Finisher">
+  <!-- Favicon -->
+  <link href="img/favicons.png" rel="icon">
+  
+  
   <link rel="stylesheet" href="css/timmer.css">
   <link rel="stylesheet" href="css/result.css">
   <link rel="stylesheet" href="css/timmer.css">
@@ -12,7 +23,13 @@
   <link rel="stylesheet" href="css/allquiz.css">
   <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
-
+<style>
+   body {
+            background-image: url('img/quiz-bg.jpg'); /* Replace 'path/to/your/image.jpg' with your image file path */
+            background-size: cover; /* Adjusts the size of the background image */
+            /* Other background properties if needed */
+        }
+</style>
 </head>
 
 <body>
@@ -21,7 +38,7 @@
     <div class="spinner"></div>
     <p>Loading questions...</p>
   </div>
-  <div class="quiz-container">
+  <div class="quiz-container" style="box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.5); ">
     <h1 id="exam-name"> Live Excel Quiz</h1>
     <button class="close-btn" onclick="closeQuiz()">Close Quiz</button>
 
