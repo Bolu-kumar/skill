@@ -1,0 +1,36 @@
+/* Style for the result summary */
+.result {
+    font-family: Arial, sans-serif;
+    text-align: left;
+    color: #fff;
+  }
+  
+  .result p{
+    text-decoration: underline;
+    text-align: center;
+
+  }
+  .result ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 50px;
+  }
+  
+  .result li {
+    margin-bottom: 10px;
+  }
+  
+  .total-time {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  .correct-answers, .total-question2, .percentage {
+    font-weight: bold;
+    color: #fff; /* Change the color to your preference */
+  }
+  

@@ -60,7 +60,7 @@ function createNavBar() {
                 <a href="#faqs" class="nav-item nav-link">FAQs</a>
                 <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Support</a>
                 <a href="verify-certificate.html" class="nav-item nav-link">Certificate</a>
-                <a href="live-quiz.html" class="nav-item nav-link">Excel Quiz</a>
+                <a href="live-quiz.html" class="nav-item nav-link">Quiz</a>
 
 
               </div>

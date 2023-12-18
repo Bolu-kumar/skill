@@ -228,6 +228,7 @@ border: dashed 1px gray; background-image:url('https://blogger.googleusercontent
  text-align: center;
  flex-basis: 700px;
  max-width:900px;
+ margin-right: -50px;
  color:#ffffff;
 }
 
@@ -271,10 +272,14 @@ border: dashed 1px gray; background-image:url('https://blogger.googleusercontent
 
 
 #loadingMessage p {
+    position: relative;
     font-family: Arial, sans-serif;
-    font-size: 18px;
+    font-size: 20px !important;
     color: rgb(6, 6, 6);
     text-align: center;
+    margin-top: 100px;
+
+  
   }
 
   /* Loader animation styles */
@@ -286,6 +291,8 @@ border: dashed 1px gray; background-image:url('https://blogger.googleusercontent
     height: 30px;
     animation: spin 20s linear infinite;
     margin-right: 20px;
+    overflow-y: hidden;
+
   }
 
   @keyframes spin {
@@ -297,3 +304,29 @@ border: dashed 1px gray; background-image:url('https://blogger.googleusercontent
       transform: rotate(360deg);
     }
   }
+
+  #exam-name{
+    text-align: center;
+    }
+    
+    @media screen and (max-width: 768px) {
+      /* Adjust padding for mobile devices */
+      #exam-name {
+        margin-top: 70px; /* Apply padding of 25px */
+      }
+    }
+
+/* time taken */
+
+/* Style for the element displaying total time taken */
+.total-time {
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  padding: 10px;
+  color: #fff; 
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: -10px;;
+}

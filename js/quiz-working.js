@@ -155,7 +155,60 @@ function load() {
     function updateAnswerTracker(classNam) {
       answerTrackerContainer.children[index - 1].classList.add(classNam);
     }
-    
+ 
+  
+    // To calculate total time taken to complete this exam
+let hours = document.getElementById('hours');
+let minutes = document.getElementById('minutes');
+let seconds = document.getElementById('seconds');
+
+let totalSeconds = 0;
+let startTime = 0;
+
+function startTimer() {
+  startTime = Date.now(); // Record the start time
+  setInterval(updateTimer, 1000);
+}
+
+function updateTimer() {
+  totalSeconds++;
+
+  let hoursValue = Math.floor(totalSeconds / 3600);
+  let minutesValue = Math.floor((totalSeconds % 3600) / 60);
+  let secondsValue = totalSeconds % 60;
+
+  hours.textContent = formatTime(hoursValue);
+  minutes.textContent = formatTime(minutesValue);
+  seconds.textContent = formatTime(secondsValue);
+}
+
+function formatTime(time) {
+  return time < 10 ? `0${time}` : time;
+}
+
+// Function to calculate the total time taken
+function calculateTotalTimeTaken() {
+  let endTime = Date.now(); // Record the end time
+  let totalTimeInSeconds = Math.floor((endTime - startTime) / 1000); // Calculate elapsed time in seconds
+
+  let totalHours = Math.floor(totalTimeInSeconds / 3600);
+  let totalMinutes = Math.floor((totalTimeInSeconds % 3600) / 60);
+  let totalSeconds = totalTimeInSeconds % 60;
+
+  // Format the total time
+  let formattedTotalTime = `${formatTime(totalHours)}:${formatTime(totalMinutes)}:${formatTime(totalSeconds)}`;
+
+  // Display total time taken in the HTML element
+  let totalTimeElement = document.getElementById('totalTimeTaken');
+  if (totalTimeElement) {
+    totalTimeElement.textContent = `Total time taken: ${formattedTotalTime}`;
+  }
+}
+startTimer();
+
+// End Time Calculation
+
+
     // Handle quiz completion
     function quizOver() {
       document.querySelector(".quiz-over").classList.add("show");
@@ -163,6 +216,8 @@ function load() {
       totalQuestionSpan2.innerHTML = questions.length;
       const calculatedPercentage = Math.ceil((score / questions.length) * 100);
       percentage.innerHTML = `${calculatedPercentage}%`;
+      calculateTotalTimeTaken();
+
           }
     
     // Restart the quiz
@@ -262,4 +317,5 @@ function load() {
         }
       }
       
+
 
