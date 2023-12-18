@@ -41,7 +41,7 @@ async function fetchFirebaseData() {
   try {
     const snapshot = await firebase.database().ref('excelQuiz').once('value');
     const totalQuestions = snapshot.numChildren(); // Total number of questions in the database
-    const randomIndices = getRandomIndices(totalQuestions, 2); // Get 10 random indices
+    const randomIndices = getRandomIndices(totalQuestions, 10); // Get 10 random indices
     
     randomIndices.forEach((randomIndex) => {
       const childSnapshot = snapshot.child(randomIndex);
