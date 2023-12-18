@@ -60,9 +60,12 @@ function createNavBar() {
                 <a href="#faqs" class="nav-item nav-link">FAQs</a>
                 <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Support</a>
                 <a href="verify-certificate.html" class="nav-item nav-link">Certificate</a>
+                <a href="live-quiz.html" class="nav-item nav-link">Excel Quiz</a>
+
 
               </div>
-              <a class="btn btn-primary py-2 px-4 ml-auto  d-lg-block text-center" href="#registration">Enroll Now</a>
+
+              <a class="btn btn-primary py-2 px-4 ml-auto  d-lg-block text-center" href="#registration">Enroll</a>
 
 
                          

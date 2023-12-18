@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <a href="" class="text-decoration-none d-block d-lg-none">
                             <img class="logo" src="img/itfinisher-logo.png" alt="">
                         </a>
+
                         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <a href="index.html" class="nav-item nav-link active">Home</a>
                                 <a href="#" class="nav-item nav-link" id="courseLink">Courses</a>
 
+
                                 <div class="nav-item dropdown">
                                     <a href="#" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" id="index">Workshop</a>
                                     <div class="dropdown-menu rounded-0 m-0">
@@ -52,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                         <a href="excel-workshop.html" class="dropdown-item border-bottom">Advanced Excel</a>
                                         <a href="data-analyst-workshop.html" class="dropdown-item border-bottom">Advanced Data Analyst</a>
                                         <a href="website-workshop.html" class="dropdown-item ">Website Development</a>
+
                                     </div>
                                 </div>
 
@@ -59,6 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <a href="#" class="nav-item nav-link faqs" id="index">FAQs</a>
                                 <a class="nav-link support" href="#" data-toggle="modal" data-target="#contactModal" id="support">Support</a>
                                 <a href="verify-certificate.html" class="nav-item nav-link certificate">Certificate</a>
+                                <a href="live-quiz.html" class="dropdown-item ">Excel Quiz</a>
+
                             </div>
                             <a class="btn btn-primary py-2 px-4 ml-auto d-lg-block text-center" href="#registration" id="enrollNow">Enroll Now</a>
                         </div>

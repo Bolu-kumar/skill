@@ -1,0 +1,52 @@
+.timer {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .clock {
+    display: inline-block;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+  }
+  
+  .clock span {
+    padding: 0 5px;
+  }
+  
+  /* Style the clock digits */
+  #hours::before,
+  #minutes::before,
+  #seconds::before {
+    content: attr(data-time);
+    position: absolute;
+    display: block;
+    font-size: 12px;
+    margin-top: -200px !important;
+    color: #aaa;
+  }
+  
+  #hours::before {
+    top: -25px;
+    left: 20px;
+  }
+  
+  #minutes::before {
+    top: -25px;
+    left: 70px;
+  }
+  
+  #seconds::before {
+    top: -25px;
+    left: 120px;
+  }
+  
+
+
+  
+
+  
+  

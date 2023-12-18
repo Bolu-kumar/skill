@@ -1,0 +1,238 @@
+
+.quiz-container{
+ max-width: 700px;
+ min-height:500px;
+ background-color: #ffffff;
+ margin:40px auto;
+ border-radius:10px;
+ padding:30px;
+}
+.quiz-container::after,.quiz-container::before{
+ content: '';
+ clear: both;
+ display: table;
+
+}
+.question-number,
+.question,
+.options,
+.button,
+.answers-tracker{
+ float: left;
+ width: 100%;
+}
+.question-number h3{
+ color:#009688;
+ border-bottom: 1px solid #ccc;
+ margin:0;
+ padding-bottom:10px;
+}
+
+.question {
+ font-size:22px;
+ color:000000;
+ padding:20px 0;
+ 
+}
+
+.options div{
+    background-color: #fff;
+    font-size: 16px;
+    color: 000000;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: solid 1px darkgray;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.options div.disabled{
+ pointer-events: none;
+}
+.options div.correct{
+ z-index: 1;
+ color: #fff;
+}
+.options div.correct::before{
+ content: '';
+ position: absolute;
+ left:0;
+ top:0;
+ width: 100%;
+ height: 100%;
+ background-color: #09d209;
+ border: solid 1px #09d209;
+ z-index: -1;
+ 
+ animation: animateBackground 1s ease;
+ animation-fill-mode: forwards;
+}
+@keyframes animateBackground{
+ 0%{
+  transform: translateX(-100%);
+ }
+ 100%{
+  transform: translateX(0%); 
+ }
+}
+.options div.wrong{
+ z-index: 1;
+ color: #fff;
+}
+.options div.wrong::before{
+ content: '';
+ position: absolute;
+ left:0;
+ top:0;
+ width: 100%;
+ height: 100%;
+ background-color:red;
+ border: solid 1px red;
+ z-index: -1;
+ 
+ animation: animateBackground 1s ease;
+ animation-fill-mode: forwards;
+}
+@keyframes animateBackground{
+ 0%{
+  transform: translateX(-100%);
+ }
+ 100%{
+  transform: translateX(0%); 
+ }
+}
+
+.button .btn{
+ padding:15px 50px;
+ border-radius:5px;
+ cursor: pointer;
+ background-color:#00a0d2;
+ font-size:16px;
+ color:#ffffff;
+ border: none;
+ display: inline-block;
+ margin:15px 0 20px;
+}
+.answers-tracker{
+ border-top:1px solid #ccc;
+ padding-top: 15px;
+}
+.answers-tracker div{
+ height: 40px;
+ width: 40px;
+ background-color: #cccccc;
+ display: inline-block;
+ border-radius: 50%;
+ margin-right:5px;
+ margin: 3px;
+}
+
+.answers-tracker div.correct{
+    background-color: #fff;
+    background-image: url(https://blogger.googleusercontent.com/img/a/AVvXsEhTysieJiTOusKu2d4WGG0VFMvT99fkqenqY30J-PYQXPkLQzShjoiqTA8uQ3pLvxx7LXuLoDh8AD-jO9NdxVHNDX4IKJT75tdxc_6J4z4jZQu7z3ky3ctWMKTmzAVpTTDoDb2jcjXAbis79ee6T-sAYeMGCtYPAU1_0PuPrjABMqICygN2KOFu33up=s833);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    border: dashed 1px gray;
+    margin: 3px;
+
+}
+.answers-tracker div.wrong{
+ background-color: #fff;
+border: dashed 1px gray; background-image:url('https://blogger.googleusercontent.com/img/a/AVvXsEikNX-7_M_M4rqYR0K5JiEHEsIRAx0wMTMdYx9REWw_wm-tdGzPnvSI4VtucGmDc_T4N50WXzMn_Pl6Qok3Y90nOwTqIzoyrsqjJy6VvZYu68ThaurV5UHUHetQfVhzsvlemmgxOP8Dbk9darCC9l4j1DYEHd1uLArCUtJFaZuqHvdNBCMS7z3j61dJ=s708');
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: 50%;
+ margin: 3px;
+}
+
+.quiz-over{
+ position: fixed;
+ left:0;
+ top:0;
+ width: 90%;
+ height: 100%;
+ background-color:rgba(0,0,0,0.9);
+ z-index: 10;
+ display: none;
+ align-items: center;
+ justify-content: center;
+}
+.quiz-over.show{
+ display: flex;
+}
+.quiz-over .box{
+ background-color:#34a9d2;
+ padding:30px;
+ padding-top: 250px;
+ padding-bottom: 250px;
+ border-radius:10px;
+ text-align: center;
+ flex-basis: 700px;
+ max-width:700px;
+ color:#ffffff;
+}
+
+.quiz-over .box h1{
+ font-size:30px;
+ margin:0 0 20px;
+}
+
+.quiz-over .box button{
+ padding:15px 50px;
+ border:none;
+ background-color:#FF9800;
+ border-radius:5px;
+ font-size:16px;
+ margin:15px 0 20px;
+ color:#ffffff;
+}
+.advt{
+     align-items: center;
+}
+
+
+      
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-timer {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.form-group label {
+    font-weight: 500;
+}
+
+
+
+#instructions {
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+}
+
+#instructions h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    padding: 10;
+    margin: 0;
+    /* list-style-type: none; */
+}
+
+li {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+  <link rel="stylesheet" href="css/timmer.css">
+   
+<link rel="stylesheet" href="css/allquiz.css">
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+<style>
+  /* Styles for the loading message */
+
+
+#loadingMessage p {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: rgb(6, 6, 6);
+  text-align: center;
+}
+
+/* Loader animation styles */
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 20s linear infinite;
+  margin-right: 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
+</head>
+
+<body>
+<!-- Loading message container -->
+<div id="loadingMessage">
+  <div class="spinner"></div>
+  <p>Loading questions...</p>
+</div>
+  
+  <div class="quiz-container">
+    <button class="close-btn" onclick="closeQuiz()">Close Quiz</button>
+
+<div class="quizContainer container-fluid well well-lg">
+<div class="quiz-container">
+  
+  <section>
+
+    <div class="timer">
+
+      <div class="clock">
+        <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+      </div>
+
+    </div>
+    
+  </section>
+
+
+
+  
+<div class="question-number">
+<h3>
+Question <span class="question-num-value"></span> of <span class="total-question"></span></h3>
+</div>
+<div class="advt"><img src="https://www.wordstreamcdn.com/wp-content/uploads/2021/07/banner-ads-examples-ncino.jpg" /><div>
+<div class="question">
+</div>
+<div class="options">
+<div class="option1" id="1" onclick="check(this)">
+</div>
+<div class="option2" id="2" onclick="check(this)">
+</div>
+<div class="option3" id="3" onclick="check(this)">
+</div>
+<div class="option4" id="4" onclick="check(this)">
+</div>
+</div>
+<div class="button">
+<button class="btn" onclick="next()" type="button">Next</button>
+    </div>
+<div class="answers-tracker">
+</div>
+</div>
+<div class="quiz-over">
+<div class="box">
+<h1>
+      Good Try!<br />
+      You Got <span class="correct-answers"></span> out of <span class="total-question2"></span> answers correct! <br />
+      That's <span class="percentage"></span>
+     </h1>
+<button onclick="tryAgain()" type="button">TryAgain</button>
+   </div>
+</div>
+  </div>
+
+
+  <script src="js/quiz-working.js"></script>
+
+ <script src="js/timmer.js"></script>
+
+
+ 
+</body>
+
+</html>

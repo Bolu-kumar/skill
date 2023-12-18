@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+   
+<link rel="stylesheet" href="css/allquiz.css">
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+
+</head>
+
+<body>
+  <div class="quiz-container">
+<div class="quizContainer container-fluid well well-lg">
+<div class="quiz-container">
+<div class="question-number">
+<h3>
+Question <span class="question-num-value"></span> of <span class="total-question"></span></h3>
+</div>
+<div class="advt"><img src="https://www.wordstreamcdn.com/wp-content/uploads/2021/07/banner-ads-examples-ncino.jpg" /><div>
+<div class="question">
+</div>
+<div class="options">
+<div class="option1" id="1" onclick="check(this)">
+</div>
+<div class="option2" id="2" onclick="check(this)">
+</div>
+<div class="option3" id="3" onclick="check(this)">
+</div>
+<div class="option4" id="4" onclick="check(this)">
+</div>
+</div>
+<div class="button">
+<button class="btn" onclick="next()" type="button">Next</button>
+    </div>
+<div class="answers-tracker">
+</div>
+</div>
+<div class="quiz-over">
+<div class="box">
+<h1>
+      Good Try!<br />
+      You Got <span class="correct-answers"></span> out of <span class="total-question2"></span> answers correct! <br />
+      That's <span class="percentage"></span>
+     </h1>
+<button onclick="tryAgain()" type="button">TryAgain</button>
+   </div>
+</div>
+  </div>
+
+
+  <script src="js/quiz.js"></script>
+</body>
+
+</html>

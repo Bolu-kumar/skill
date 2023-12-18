@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+     <!-- Home Page -->
+      <title>Exam Portal</title>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <meta name="description" content="Empower your IT career at IT Finisher. Discover technical training programs covering programming, web development, cybersecurity, and more. Explore educational videos, career development tips, and job-related content. Subscribe for the latest updates.">
+    
+    <!-- Favicon -->
+    <link href="img/favicons.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/mystyles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/quiz.css">
+    <!-- firebase-app confi-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+   
+</head>
+
+<body>
+
+<script src="js/header.js"></script>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body" id="registrationSection">
+                        <h1 class="text-center mb-4">Excel Certification</h1>
+                        <form id="userForm">
+                            <div class="form-group">
+                                <label for="userName">Enter Your Name:</label>
+                                <input type="text" class="form-control" id="userName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="userRegId">Enter Your Reg. ID:</label>
+                                <input type="text" class="form-control" id="userRegId" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="userPhoneNumber">Enter Your Phone Number:</label>
+                                <input type="tel" class="form-control" id="userPhoneNumber" required>
+                            </div>
+
+                            <!-- Exam Instructions -->
+                            <div id="instructions">
+                                <h2 class="text-center mb-3"></h2>
+                                <ul>
+                                    <li>This exam tests your Fundamental Excel Skills.</li>
+                                    <li>Once you pass, you can verify your Certificate here.</li>
+                                    <li>You are allowed only one attempt for this examination.</li>
+                                </ul>
+
+
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block my-5">Start Exam</button>
+                        </form>
+                    </div>
+                    
+                    <div class="card-body" id="countdownSection" style="display: none;">
+                        <div id="instructionsSection" style="display: block;">
+                            <div id="instructions">
+                                <!-- Instructions and messages will be displayed here -->
+
+                            <h2 class="text-center mb-3">Instructions:</h2>
+                            <ul>
+                                <li>This exam consists of multiple-choice questions.</li>
+                                <li>You'll have 30 minutes to complete the exam.</li>
+                                <li>There is no negative marking.</li>
+                                <li>Each question carries 1 mark.</li>
+                                <li>60% is the passing criteria.</li>
+                                <li>Once you select an option, you can't change it.</li>
+                                <li>You can't move to the previous or next question without attempting the current one.
+                                </li>
+                                <li>Answer all the questions before submitting.</li>
+                                <li>Do not refresh the web page; otherwise, you will lose your answers.</li>
+                                <li>You are allowed only one attempt for this examination.</li>
+                            </ul>
+                            </div>
+                        </div>
+                        <div id="countdownTimer" class="countdown-timer">
+                            <!-- Countdown timer will be displayed here -->
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        let countdownInterval;
+
+        function displayCountdown() {
+            const countdownElement = document.getElementById('countdownTimer');
+            const examDate = new Date(); // Current date and time
+            examDate.setHours(22, 0, 0, 0); // Set exam date to 01:46:40
+
+            const now = new Date().getTime();
+            const timeRemaining = examDate - now;
+
+            if (timeRemaining <= 0) {
+                document.getElementById('countdownSection').style.display = 'none';
+                document.getElementById('instructionsSection').style.display = 'block';
+                // document.getElementById('instructions').innerHTML = '<h2>Exam Window Closed Now</h2>';
+                alert("Exam Window Closed Now");
+                window.location.href = 'https://www.itfinisher.com'; // Redirect to itfinisher.com
+
+                return;
+            }
+
+            countdownInterval = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = examDate - now;
+
+                if (distance <= 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById('countdownSection').style.display = 'none';
+                    document.getElementById('instructionsSection').style.display = 'block';
+                    // document.getElementById('instructions').innerHTML = '<h2>Exam Window Closed Now</h2>';
+                    alert("Exam Window Closed Now");
+                    window.location.href = 'https://www.itfinisher.com'; // Redirect to itfinisher.com
+
+                } else {
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    countdownElement.innerHTML = `Exam starts: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+                    document.getElementById('countdownSection').style.display = 'block';
+                }
+            }, 1000);
+
+            if (timeRemaining > 0 && timeRemaining <= (3600000)) {
+                setTimeout(openQuizAtScheduledTime, timeRemaining);
+            }
+        }
+
+        function openQuizAtScheduledTime() {
+            const now = new Date().getTime();
+            const examDate = new Date();
+            examDate.setHours(15, 0, 0, 0); // Set exam date to 01:46:40
+
+            if (now >= examDate.getTime() && now <= (examDate.getTime() + (3600000))) {
+                const quizWindow = window.open('quiz.html', '_blank', 'fullscreen=yes');
+                if (!quizWindow) {
+                    alert('Popup blocked! Please allow popups to launch the quiz.');
+                } else {
+                    window.close();
+                }
+            }
+        }
+
+        document.getElementById('userForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const userName = document.getElementById('userName').value;
+            const userRegId = document.getElementById('userRegId').value;
+            const userPhoneNumber = document.getElementById('userPhoneNumber').value;
+
+            if (userName.trim() === '' || userRegId.trim() === '' || userPhoneNumber.trim() === '') {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            document.getElementById('registrationSection').style.display = 'none'; // Hide registration section
+            document.getElementById('countdownSection').style.display = 'block'; // Show countdown section
+            displayCountdown(); // Start countdown after registration
+        });
+    </script>
+
+
+
+<script src="js/footer.js"></script>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
