@@ -70,6 +70,9 @@ async function fetchFirebaseData() {
       console.error('Error fetching quiz data:', error);
     }
   }
+
+  
+
   
   function getRandomIndices(total, count) {
     const indices = [];
