@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <a href="#" class="nav-item nav-link faqs" id="index">FAQs</a>
                                 <a class="nav-link support" href="#" data-toggle="modal" data-target="#contactModal" id="support">Support</a>
                                 <a href="verify-certificate.html" class="nav-item nav-link certificate">Certificate</a>
-                                <a href="live-quiz.html" class="nav-item nav-link" >Quiz</a>
+                                <a href="quiz-live.html" class="nav-item nav-link" >Quiz</a>
 
                             </div>
                             <a class="btn btn-primary py-2 px-4 ml-auto d-lg-block text-center" href="#registration" id="enrollNow">Enroll Now</a>
