@@ -19,6 +19,44 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/mystyles.css" rel="stylesheet">
+    <!-- firebase-app confi-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+    <script>
+      window.onload = function() {
+        function checkStatus(response) {
+          if (response.status === 404) {
+            window.location.href = '404.html';
+          }
+        }
+  
+        fetch(window.location.href)
+          .then(checkStatus)
+          .catch(function(error) {
+            console.log('Error fetching the URL:', error);
+          });
+      };
+    </script>
+  </head>
+   <head>
+    <meta charset="utf-8">
+     <!-- Home Page -->
+      <title>IT Finisher Technical Training Institute | Explore Technology & Career Development</title>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <meta name="description" content="Empower your IT career at IT Finisher. Discover technical training programs covering programming, web development, cybersecurity, and more. Explore educational videos, career development tips, and job-related content. Subscribe for the latest updates.">
+    
+    <!-- Favicon -->
+    <link href="img/favicons.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -27,7 +65,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
     
-  </head>
+  </head> 
   <body>
 <script src="js/IndexMenu.js"></script>
 
@@ -58,28 +96,25 @@
       </div>
   </section>
 
- 
-    <section id="popAuto">
-      <div id="autoPopup" class="popup-overlay">
-        <div class="popup-content">
-            <!-- Bootstrap 4 close button -->
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeAutoPopup()">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <h3 class="text-center text-dark" id="popupTitle"></h3><br>
-
-            <div id="popupContent" class="text-white"></div>
-            <p class="registration-link">
-                <a id="registrationLink" target="_blank">Become a professional in Excel! Click Here for Registration👇</a>
-            </p>
-            <img class="popup-image" id="popupImage" alt="Image Alt Text">
-        </div>
+  <section id="popAuto">
+    <div id="autoPopup" class="popup-overlay">
+      <div class="popup-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeAutoPopup()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h3 class="text-center text-dark" id="popupTitle"></h3><br>
+        <div id="popupContent" class="text-white"></div>
+        <p class="registration-link">
+          <a id="registrationLink" target="_blank">Become a professional in Excel! Click Here for Registration👇</a>
+        </p>
+        <img class="popup-image" id="popupImage" alt="Image Alt Text">
+      </div>
     </div>
-    </section>
-  
+  </section>
+
   
 
- 
+
 
     <!-- Testimonial Start -->
     <!-- <div class="container-fluid py-5"><div class="container py-5"><div class="text-center mb-5"><h1 class="display-5 mb-0 text-center py-5" style="padding-bottom: 100px;">What Say Our Students
@@ -114,46 +149,47 @@
         </div>
       </div>
     </section>
-    <!-- Contact Modal -->
-    <section id="contact-forms">
-      <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title text-center" id="contactModalLabel" style="text-align: center;">Request Your Query</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <section id="contact-forms">
-                <main>
-                  <div class="contact-form">
-                    <div class="alert alert-success text-center" role="alert"> Your request has been successfully submitted!Our team will contact shortly!</div>
-                    <form id="contactForm">
-                      <label for="name">Name:</label>
-                      <input type="text" id="name" name="name" required />
-                      <label for="phone">Phone:</label>
-                      <input type="tel" id="phone" name="phone" pattern="^\+?\d{10,14}$" required />
-                      <label for="message">Message:</label>
-                      <textarea id="message" name="message" rows="4" required></textarea>
+
+
+<!-- Contact Modal -->
+   <section id="contact-forms">
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center" id="contactModalLabel" style="text-align: center;">Request Your Query</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <section id="contact-forms">
+              <main>
+                <div class="contact-form">
+                  <div class="alert alert-success text-center" role="alert"> Your request has been successfully submitted!Our team will contact shortly!</div>
+                  <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" pattern="^\+?\d{10,14}$" required />
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <br>
+                    <div class="modal-footer">
                       <br>
-                      <div class="modal-footer">
-                        <br>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button id="submit" type="submit" class="btn btn-success">Submit</button>
-                      </div>
-                    </form>
-                  </div>
-                </main>
-              </section>
-            </div>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button id="submit" type="submit" class="btn btn-success">Submit</button>
+                    </div>
+                  </form>
+                </div>
+              </main>
+            </section>
           </div>
         </div>
       </div>
-    </section>
-    
-
+    </div>
+  </section>
+   
 
     <!-- FAQ star  -->
     <section id="faqs" class="py-5">
@@ -225,6 +261,7 @@
         </div>
       </div>
     </section>
+    
     <!-- contact end  -->
     
 
@@ -352,29 +389,29 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top">
       <i class="fa fa-angle-double-up"></i>
     </a>
-    <!-- Bootstrap JavaScript and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <!-- Other JavaScript Libraries -->
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <script src="js/course_json.js"></script>
-    <script src="js/carousel.js"></script>
-    <!-- <script src="js/workshop.js"></script> -->
-    <script src="js/youtube.js"></script>
-    <script src="js/videos.js"></script>
-    <script src="js/about.js"></script>
-    <script src="js/contactForm.js"></script>
-    <script src="js/live-workshop.js"></script>
-    <script src="js/myprojects.js"></script>
-    <script src="js/faqs.js"></script>
-    <script src="js/autoPop.js"></script>
-    <script>
+      <!-- Bootstrap JavaScript and jQuery -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!-- Other JavaScript Libraries -->
+      <script src="lib/easing/easing.min.js"></script>
+      <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    
+      <!-- Template Javascript -->
+      <script src="js/main.js"></script>
+      <script src="js/course_json.js"></script>
+      <script src="js/carousel.js"></script>
+      <!-- <script src="js/workshop.js"></script> -->
+      <script src="js/youtube.js"></script>
+      <script src="js/videos.js"></script>
+      <script src="js/about.js"></script>
+      <script src="js/live-workshop.js"></script>
+      <script src="js/myprojects.js"></script>
+      <script src="js/faqs.js"></script>
+      <script src="js/autoPop.js"></script>
+      <script src="js/contactForm.js"></script>
+   
+ 
+   <script>
       var carousel = document.querySelector('#carouselExample');
       // Start the carousel auto scroll
       carousel.addEventListener('slid.bs.carousel', function() {
@@ -382,14 +419,6 @@
           carousel.carousel('next');
         }, 2000);
       });
-
-
-
-
-
-
-
-
     </script>
  </body>
 </html>

@@ -1,0 +1,55 @@
+
+.jumbotron {
+  background-color: #f8f9fa;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-radius: 10px;
+  border: 10px;
+ 
+
+}
+.jumbotron h1 {
+  font-size: 3rem;
+}
+
+
+.lead {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+.about-info {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+.social-links .btn {
+  margin-right: 10px;
+}
+
+
+.quiz-content {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+
+.quiz-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.quiz-item h3 {
+  margin-top: 0;
+}
+.quiz-item-description {
+  margin-bottom: 20px;
+}
+.click-link {
+  text-align: right;
+}
+.click-link button {
+  width: 100px;
+  border-radius: 20px;
+}

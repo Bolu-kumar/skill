@@ -78,19 +78,16 @@
     const sliderData = [
         {
             title: "MS EXCEL WORKSHOP",
-            date: "Before:10-12-2023",
-            time: "11:00 AM",
-            live: "Live",
-            hrs: "3+ Hrs",
-
+            booking: "Advanced Enroll students get 50% Off",
+            webinarDate: "Check WhatsApp",
             bgColor: "bg-registration",
             hrColor: "bg-primary",
             imageSrc: "img/course/excel-99.png",
             altText: "Course Image",
             buttonText: "Become a professional in Excel! Enroll Now: Click Here:👉",
-            buttonLink: "upcoming-workshop-Registration.html",
+            buttonLink: "https://rzp.io/l/SravVo0po",
             content: [
-                "Enroll before Dec 10, 2023, for just ₹99 and get a 50% discount.",
+                "Webinar Detail will be send you 2 days before webinar.",
                 "Module#1. Formatting:(Number, Text, Conditional)",
                 "Module#2. Data Validation:(Data Validation)",
                 "Module#3. Data Cleanup:(Cleanup, Remove Duplicate etc.,)",
@@ -123,9 +120,9 @@
                     <div class="row align-items-center">
                         <div class="col-lg-7 mb-4 mb-lg-0 text-center text-lg-left">
                             <div class="container">
-                                <h4 class="text-white"><i class="fas fa-calendar-alt text-primary"></i> ${item.date} <span class="mx-2"></span><i class="fas fa-thumbtack text-primary"></i> ${item.time}</h4>
-                                <h4 class="text-white "><i class="fas fa-video text-primary"></i> ${item.live} <span class="mx-2"></span><i class="far fa-clock text-primary"></i> ${item.hrs}</h4>
-                            </div>
+                                <h4 class="text-white">✅Booking: ${item.booking} <span class="mx-2"></span></h4>
+                                <h4 class="text-white ">✅Webinar Date: ${item.webinarDate} <span class="mx-2"></span></h4>
+                           </div>
                             <div class="py-3">
                                 ${item.content.map(contentItem => `<ul class="text-white"><i class="fa fa-check text-primary mr-2"></i>${contentItem}</ul>`).join('')}
                             </div>

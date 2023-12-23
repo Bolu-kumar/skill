@@ -9874,7 +9874,8 @@ h6,
 }
 
 .bg-registration {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/registration.jpg), no-repeat center center;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/founder-bg-image.jpg), no-repeat center center; */
+  background-image: url(img/founder-bg-image);
   background-size: cover;
 }
 
