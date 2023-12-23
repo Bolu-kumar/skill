@@ -2,7 +2,7 @@
   const workshopData = [
     {
         title: "Live Workshop",
-        booking: "Advanced Enroll students get 50% Off",
+        booking: "Advanced Enroll students, get 50% Off",
         webinarDate: "Check WhatsApp",
         bgColor: "bg-registration",
         hrColor: "bg-primary",
